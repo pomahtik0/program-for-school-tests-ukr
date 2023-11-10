@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace program_for_school_tests_ukr.Classes
 {
-    internal class User
+    internal abstract class User
     {
         public string Username { get; private set; }
         public string Name { get; private set; }
