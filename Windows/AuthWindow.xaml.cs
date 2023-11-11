@@ -23,5 +23,10 @@ namespace program_for_school_tests_ukr.Windows
         {
             InitializeComponent();
         }
+
+        private void Ok_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
