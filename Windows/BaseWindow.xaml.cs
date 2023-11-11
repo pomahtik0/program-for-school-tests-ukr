@@ -19,15 +19,14 @@ namespace program_for_school_tests_ukr.Windows
     /// </summary>
     public partial class BaseWindow : Window
     {
-        AuthWindow authWindow;
         public BaseWindow()
         {
-            authWindow = new AuthWindow();
             InitializeComponent();
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
+            AuthWindow authWindow = new AuthWindow();
             authWindow.Owner = this;
             authWindow.ShowDialog();
         }
