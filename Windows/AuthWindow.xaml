@@ -8,7 +8,9 @@
         Title="Вхід" Height="120" Width="200">
     <Grid>
         <StackPanel>
+            <Label>Логін</Label>
             <TextBox></TextBox>
+            <Label>Пароль</Label>
             <TextBox></TextBox>
             <Button>Ok</Button>
         </StackPanel>
