@@ -8,9 +8,9 @@
         Title="Вхід" Height="120" Width="200">
     <Grid>
         <StackPanel>
-            <Label Target="{Binding ElementName=login}">Логін</Label>
+            <Label Target="{Binding ElementName=login}">Логін:</Label>
             <TextBox Name="login"></TextBox>
-            <Label Target="{Binding ElementName=password}">Пароль</Label>
+            <Label Target="{Binding ElementName=password}">Пароль:</Label>
             <TextBox Name="password"></TextBox>
             <Button>Ok</Button>
         </StackPanel>
