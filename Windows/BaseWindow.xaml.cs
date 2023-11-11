@@ -31,7 +31,12 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string messageBoxText = "Ще не реалізовано";
+            string caption = "Не спіши";
+            MessageBoxButton button = MessageBoxButton.OK;
+            MessageBoxImage icon = MessageBoxImage.Warning;
 
+            MessageBox.Show(messageBoxText, caption, button, icon);
         }
     }
 }
