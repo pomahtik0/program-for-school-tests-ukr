@@ -9,8 +9,8 @@
     <Grid>
         <DockPanel>
             <StackPanel>
-                <Button>Контрольні тести</Button>
-                <Button>Тренувальні тести</Button>
+                <Button Click="Button_Click">Контрольні тести</Button>
+                <Button Click="Button_Click">Тренувальні тести</Button>
             </StackPanel>
             <Button VerticalAlignment="Top" HorizontalAlignment="Right" Click="Enter_Click">Вхід</Button>
         </DockPanel>
