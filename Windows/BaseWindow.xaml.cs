@@ -23,12 +23,12 @@ namespace program_for_school_tests_ukr.Windows
         public BaseWindow()
         {
             authWindow = new AuthWindow();
-            authWindow.Owner = this;
             InitializeComponent();
         }
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
+            authWindow.Owner = this;
             authWindow.ShowDialog();
         }
 
