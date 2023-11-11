@@ -12,7 +12,7 @@
                 <Button>Контрольні тести</Button>
                 <Button>Тренувальні тести</Button>
             </StackPanel>
-            <Button VerticalAlignment="Top" HorizontalAlignment="Right">Вхід</Button>
+            <Button VerticalAlignment="Top" HorizontalAlignment="Right" Click="Enter_Click">Вхід</Button>
         </DockPanel>
     </Grid>
 </Window>
