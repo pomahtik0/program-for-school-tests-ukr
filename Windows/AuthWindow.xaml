@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows"
         mc:Ignorable="d"
-        Title="Вхід" Height="120" Width="200">
+        Title="Вхід" Width="200">
     <Grid>
-        <StackPanel>
+        <StackPanel Margin="10">
             <Label Target="{Binding ElementName=login}">Логін:</Label>
             <TextBox Name="login"></TextBox>
             <Label Target="{Binding ElementName=password}">Пароль:</Label>
             <TextBox Name="password"></TextBox>
-            <Button>Ok</Button>
+            <Button Margin="10">Ok</Button>
         </StackPanel>
     </Grid>
 </Window>
