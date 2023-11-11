@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows"
         mc:Ignorable="d"
-        Title="Вхід" SizeToContent="Height" Width="250">
+        Title="Вхід" ResizeMode="NoResize" WindowStyle="ToolWindow" SizeToContent="Height" Width="250">
     <Grid>
         <StackPanel Margin="10">
             <Label Target="{Binding ElementName=login}" Content="Логін:"/>
