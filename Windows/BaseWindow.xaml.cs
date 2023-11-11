@@ -29,7 +29,7 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-
+            authWindow.ShowDialog();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
