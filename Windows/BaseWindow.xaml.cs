@@ -19,7 +19,7 @@ namespace program_for_school_tests_ukr.Windows
     /// </summary>
     public partial class BaseWindow : Window
     {
-        Window authWindow;
+        AuthWindow authWindow;
         public BaseWindow()
         {
             authWindow = new AuthWindow();
