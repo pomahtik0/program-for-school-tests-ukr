@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="BaseWindow" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <Button>Контрольні тести</Button>
-            <Button>Тренувальні тести</Button>
-        </StackPanel>
+        <DockPanel>
+            <StackPanel>
+                <Button>Контрольні тести</Button>
+                <Button>Тренувальні тести</Button>
+            </StackPanel>
+            <Label HorizontalAlignment="Right">Вхід</Label>
+        </DockPanel>
     </Grid>
 </Window>
