@@ -19,6 +19,10 @@ namespace program_for_school_tests_ukr.Classes
     internal class UserContext : DbContext
     {
         public DbSet<User> Users { get; private set;}
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(App.Current.Properties["connectionString"]?.ToString());
+        }
 
     }
 }
