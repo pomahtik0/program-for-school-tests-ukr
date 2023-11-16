@@ -15,7 +15,7 @@ namespace program_for_school_tests_ukr.Classes
         public string Name { get; private set; }
         private string Password { get; set; }
 
-        User(string username, string name, string password)
+        public User(string username, string name, string password)
         {
             Username = username;
             Name = name;
