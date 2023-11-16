@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,6 @@ namespace program_for_school_tests_ukr.Windows
         public LoadingWindow()
         {
             InitializeComponent();
-            App.Current.Properties["connectionString"] = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pomahtik\source\repos\program for school tests ukr\Database\Database.mdf"";Integrated Security=True;Connect Timeout=30";
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
