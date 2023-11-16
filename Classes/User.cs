@@ -10,6 +10,7 @@ namespace program_for_school_tests_ukr.Classes
 {
     internal abstract class User
     {
+        public int Id { get; set; }
         public string Username { get; private set; }
         public string Name { get; private set; }
         private string Password { get; set; }
@@ -17,6 +18,7 @@ namespace program_for_school_tests_ukr.Classes
 
     internal class UserContext : DbContext
     {
+        public DbSet<User> Users { get; private set;}
 
     }
 }
