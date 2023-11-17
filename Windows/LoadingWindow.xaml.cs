@@ -27,9 +27,6 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var userContext = new UserContext();
-            userContext.Add(new Teacher() { Name = "Teacher Best", Username = "teacher1", Password = "teacher1" });
-            userContext.SaveChanges();
             BaseWindow baseWindow = new BaseWindow();
             baseWindow.Show();
             this.Close();
