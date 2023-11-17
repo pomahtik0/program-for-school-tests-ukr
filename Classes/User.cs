@@ -18,6 +18,7 @@ namespace program_for_school_tests_ukr.Classes
 
     internal class UserContext : DbContext
     {
+        public DbSet<User> Users { get; set; }
         public DbSet<Teacher> Teachers { get; set;}
         public DbSet<Student> Students { get; set;}
         protected override void OnConfiguring(DbContextOptionsBuilder options)
