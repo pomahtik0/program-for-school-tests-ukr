@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 
 namespace program_for_school_tests_ukr.Classes
 {
@@ -19,12 +20,17 @@ namespace program_for_school_tests_ukr.Classes
     internal class UserContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-        public DbSet<Teacher> Teachers { get; set;}
-        public DbSet<Student> Students { get; set;}
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(App.Current.Properties["connectionString"]?.ToString());
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasDiscriminator<string>("User_type")
+                .HasValue<Student>("Student")
+                .HasValue<Teacher>("Teacher");
+        }
     }
 }
