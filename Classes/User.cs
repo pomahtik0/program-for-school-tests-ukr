@@ -5,31 +5,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace program_for_school_tests_ukr.Classes
 {
     internal abstract class User
     {
         public int Id { get; set; }
-        public string Username { get; private set; }
-        public string Name { get; private set; }
-        private string Password { get; set; }
-
-        public User(string name, string username, string password)
-        {
-            Name = name;
-            Username = username;
-            Password = password;
-        }
+        public string Username { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
     }
 
     internal class UserContext : DbContext
     {
+        public DbSet<User> Users { get; set;}
         public DbSet<Teacher> Teachers { get; set;}
         public DbSet<Student> Students { get; set;}
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            options.UseSqlServer(App.Current.Properties["connectionString"]?.ToString());
+            optionsBuilder.UseSqlServer("DBCS");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+                .HasDiscriminator<string>("user_type")
+                .HasValue<Student>("student")
+                .HasValue<Teacher>("teacher");
         }
 
     }
