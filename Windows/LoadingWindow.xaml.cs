@@ -30,6 +30,7 @@ namespace program_for_school_tests_ukr.Windows
         {
             var connection = new UserContext();
             Teacher teacher = new Teacher() { Name = "name", Username = "teacher1", Password = "teacher1" };
+            connection.Add(teacher);
             connection.SaveChanges();
             BaseWindow baseWindow = new BaseWindow();
             baseWindow.Show();
