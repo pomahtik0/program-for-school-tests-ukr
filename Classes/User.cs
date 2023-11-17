@@ -11,9 +11,9 @@ namespace program_for_school_tests_ukr.Classes
     internal abstract class User
     {
         public int Id { get; set; }
-        public string Username { get; private set; }
-        public string Name { get; private set; }
-        private string Password { get; set; }
+        public string Username { get; set; }
+        public string Name { get; set; }
+        public string Password { get; set; }
     }
 
     internal class UserContext : DbContext
