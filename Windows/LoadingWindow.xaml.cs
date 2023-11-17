@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,9 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            var connection = new UserContext();
+            Teacher teacher = new Teacher() { Name = "name", Username = "teacher1", Password = "teacher1" };
+            connection.SaveChanges();
             BaseWindow baseWindow = new BaseWindow();
             baseWindow.Show();
             this.Close();
