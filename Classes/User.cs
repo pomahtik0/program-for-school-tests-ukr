@@ -14,13 +14,6 @@ namespace program_for_school_tests_ukr.Classes
         public string Username { get; private set; }
         public string Name { get; private set; }
         private string Password { get; set; }
-
-        public User(string name, string username, string password)
-        {
-            Name = name;
-            Username = username;
-            Password = password;
-        }
     }
 
     internal class UserContext : DbContext
