@@ -23,15 +23,10 @@ namespace program_for_school_tests_ukr.Windows
         public LoadingWindow()
         {
             InitializeComponent();
-            App.Current.Properties["connectionString"] = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pomahtik\source\repos\program for school tests ukr\Database\Database.mdf"";Integrated Security=True;Connect Timeout=30";
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var connection = new UserContext();
-            Teacher teacher = new Teacher() { Name = "name", Username = "teacher1", Password = "teacher1" };
-            connection.Add(teacher);
-            connection.SaveChanges();
             BaseWindow baseWindow = new BaseWindow();
             baseWindow.Show();
             this.Close();
