@@ -30,6 +30,15 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Ok_Button_Click(object sender, RoutedEventArgs e)
         {
+            var user = userContext.Users.Where(x => x.Username == login.Text).First();
+            if (user?.Password == password.Text) 
+            { 
+                //login
+            }
+            else
+            {
+                user = null;
+            }
             this.Close();
         }
     }
