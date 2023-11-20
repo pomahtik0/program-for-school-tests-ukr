@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,14 @@ namespace program_for_school_tests_ukr.Windows
         public StudentWindow()
         {
             InitializeComponent();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            User.CurrentUser = null;
+            BaseWindow baseWindow = new BaseWindow();
+            baseWindow.Show();
+            this.Close();
         }
     }
 }
