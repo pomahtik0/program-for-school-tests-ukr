@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,11 @@ namespace program_for_school_tests_ukr.Windows
         {
             AuthWindow authWindow = new AuthWindow();
             authWindow.Owner = this;
-            authWindow.ShowDialog();
+            if (authWindow.ShowDialog() == true)
+            {
+                if (User.CurrentUser?.ToString() == "Teacher") ; // вхід вчителя
+                else; // вхід студента
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
