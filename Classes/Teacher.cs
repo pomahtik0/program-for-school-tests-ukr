@@ -12,5 +12,9 @@ namespace program_for_school_tests_ukr.Classes
         //public List<Test> OwnedTests { get; init; }
 
         //поле для пройдених учнями тестів з оцінками, потім реалізую
+        public override string ToString()
+        {
+            return "Teacher";
+        }
     }
 }
