@@ -37,7 +37,12 @@ namespace program_for_school_tests_ukr.Windows
                     teacherWindow.Show();
                     this.Close();
                 }
-                else; // вхід студента
+                else // вхід студента
+                {
+                    StudentWindow studentWindow = new StudentWindow();
+                    studentWindow.Show();
+                    this.Close();
+                }
             }
         }
 
