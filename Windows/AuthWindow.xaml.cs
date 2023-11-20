@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
@@ -19,9 +21,11 @@ namespace program_for_school_tests_ukr.Windows
     /// </summary>
     public partial class AuthWindow : Window
     {
+        UserContext userContext;
         public AuthWindow()
         {
             InitializeComponent();
+            userContext = new UserContext();
         }
 
         private void Ok_Button_Click(object sender, RoutedEventArgs e)
