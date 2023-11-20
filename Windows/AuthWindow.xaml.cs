@@ -33,13 +33,13 @@ namespace program_for_school_tests_ukr.Windows
                 var user = userContext.Users.Where(x => x.Username == login.Text).First();
                 if (user?.Password == password.Text)
                 {
-                    //login
+                    User.CurrentUser = user;
                     MessageBox.Show(user.ToString());
                     this.Close();
                 }
                 else
                 {
-                    user = null;
+                    User.CurrentUser = null;
                 }
             }
         }
