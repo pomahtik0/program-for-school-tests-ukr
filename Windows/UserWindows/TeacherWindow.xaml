@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="TeacherWindow" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel>
+            <StackPanel>
+                <Button>Тренувальні тести</Button>
+                <Button>Контрольні тести</Button>
+                <Button>Ваші тести</Button>
+            </StackPanel>
+            <Button VerticalAlignment="Top" HorizontalAlignment="Right">Вийти</Button>
+        </DockPanel>
+        <Label VerticalAlignment="Bottom" HorizontalAlignment="Right">Ласкаво просимо "ім'я"</Label>
     </Grid>
 </Window>
