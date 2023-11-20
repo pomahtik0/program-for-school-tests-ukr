@@ -30,7 +30,7 @@ namespace program_for_school_tests_ukr.Windows
         {
             using (var userContext = new UserContext())
             {
-                var user = userContext.Users.Where(x => x.Username == login.Text).First();
+                var user = userContext.Users.Where(x => x.Username == login.Text).FirstOrDefault();
                 if (user?.Password == password.Text)
                 {
                     User.CurrentUser = user;
