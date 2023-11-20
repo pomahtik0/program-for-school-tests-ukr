@@ -22,7 +22,7 @@ namespace program_for_school_tests_ukr.Classes
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(App.Current.Properties["connectionString"]?.ToString());
+            options.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pomahtik\source\repos\program for school tests ukr\Database\Database.mdf"";Integrated Security=True;Connect Timeout=30");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
