@@ -13,7 +13,7 @@
                 <Button>Контрольні тести</Button>
                 <Button>Ваші тести</Button>
             </StackPanel>
-            <Button VerticalAlignment="Top" HorizontalAlignment="Right">Вийти</Button>
+            <Button VerticalAlignment="Top" HorizontalAlignment="Right" Click="ExitButton_Click">Вийти</Button>
         </DockPanel>
         <Label VerticalAlignment="Bottom" HorizontalAlignment="Right">Ласкаво просимо "ім'я"</Label>
     </Grid>
