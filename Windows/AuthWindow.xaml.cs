@@ -24,7 +24,6 @@ namespace program_for_school_tests_ukr.Windows
         public AuthWindow()
         {
             InitializeComponent();
-            DialogResult = false;
         }
 
         private void Ok_Button_Click(object sender, RoutedEventArgs e)
