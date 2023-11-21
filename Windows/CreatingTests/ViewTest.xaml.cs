@@ -23,5 +23,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             InitializeComponent();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Owner.Show();
+        }
     }
 }

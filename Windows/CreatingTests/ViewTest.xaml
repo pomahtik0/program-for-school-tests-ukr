@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.CreatingTests"
         mc:Ignorable="d"
-        Title="ViewTest" Height="450" Width="800">
+        Title="ViewTest" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
         
     </Grid>
