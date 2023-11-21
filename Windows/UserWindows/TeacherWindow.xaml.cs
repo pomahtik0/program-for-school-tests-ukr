@@ -1,4 +1,5 @@
 ﻿using program_for_school_tests_ukr.Classes;
+using program_for_school_tests_ukr.Windows.CreatingTests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,10 @@ namespace program_for_school_tests_ukr.Windows
 
         private void YourTests_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            ViewTest viewTest = new ViewTest();
+            viewTest.Owner = this;
+            viewTest.Show();
+            this.Hide();
         }
     }
 }
