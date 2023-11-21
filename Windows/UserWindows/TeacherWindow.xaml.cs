@@ -32,5 +32,10 @@ namespace program_for_school_tests_ukr.Windows
             baseWindow.Show();
             this.Close();
         }
+
+        private void YourTests_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

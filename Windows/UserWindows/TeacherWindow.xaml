@@ -11,7 +11,7 @@
             <StackPanel>
                 <Button>Тренувальні тести</Button>
                 <Button>Контрольні тести</Button>
-                <Button>Ваші тести</Button>
+                <Button Click="YourTests_Button_Click">Ваші тести</Button>
             </StackPanel>
             <Button VerticalAlignment="Top" HorizontalAlignment="Right" Click="ExitButton_Click">Вийти</Button>
         </DockPanel>
