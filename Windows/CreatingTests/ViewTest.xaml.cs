@@ -17,9 +17,9 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
     /// <summary>
     /// Interaction logic for CreateTest.xaml
     /// </summary>
-    public partial class CreateTest : Window
+    public partial class ViewTest : Window
     {
-        public CreateTest()
+        public ViewTest()
         {
             InitializeComponent();
         }
