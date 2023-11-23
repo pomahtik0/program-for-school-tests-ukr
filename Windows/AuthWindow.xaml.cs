@@ -1,4 +1,5 @@
 ﻿using program_for_school_tests_ukr.Classes;
+using program_for_school_tests_ukr.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Ok_Button_Click(object sender, RoutedEventArgs e)
         {
-            using (var userContext = new UserContext())
+            using (var userContext = new ApplicationContext())
             {
                 var user = userContext.Users.Where(x => x.Username == login.Text).FirstOrDefault();
                 if (user?.Password == password.Text)
