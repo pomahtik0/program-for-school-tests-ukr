@@ -13,11 +13,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public bool IsRandomOrdered { get; set; }
         public bool GetRandomTests { get; set; } // Обрати випадкові запитання зі списку
         public int QuestionCount { get; set; } // Кількість запитань
-        public int[] LeveledQuestionCount { get; set; } = new int[3];// Кількість запитань
-
-        //результат виражається оцінкою чи відповіддю?
-
-        //поле з історією проходження цього тесту
+        public int[] LeveledQuestionCount { get; set; } = new int[3];// Кількість
+        public List<Mark> Marks { get; set; } = new List<Mark>();
 
 
     }
