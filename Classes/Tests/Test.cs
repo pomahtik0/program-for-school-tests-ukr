@@ -8,6 +8,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
 {
     internal class Test
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public Teacher Owner { get; set; }
         public string Description { get; set; }
