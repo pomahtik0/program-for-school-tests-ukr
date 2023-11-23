@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="ViewTest" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
-        
+        <DockPanel>
+            <StackPanel>
+                <ListView></ListView>
+                <DockPanel>
+                    <Button>1</Button>
+                    <Button>2</Button>
+                    <Button>3</Button>
+                </DockPanel>
+            </StackPanel>
+            <Label>Опис</Label>
+        </DockPanel>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom">Exit</Button>
+        <Label HorizontalAlignment="Right" VerticalAlignment="Bottom">ім'я</Label>
     </Grid>
 </Window>
