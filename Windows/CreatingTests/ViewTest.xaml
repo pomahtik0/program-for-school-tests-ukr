@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Title="ViewTest" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
-        <DockPanel>
-            <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
                 <ListView></ListView>
                 <DockPanel>
                     <Button>1</Button>
@@ -16,9 +19,8 @@
                     <Button>3</Button>
                 </DockPanel>
             </StackPanel>
-            <Label>Опис</Label>
-        </DockPanel>
-        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom">Exit</Button>
-        <Label HorizontalAlignment="Right" VerticalAlignment="Bottom">ім'я</Label>
+            <Label Grid.Column="1">Опис</Label>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Bottom">Exit</Button>
+        <Label HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1">ім'я</Label>
     </Grid>
 </Window>
