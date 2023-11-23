@@ -8,7 +8,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
 {
     internal class Question
     {
-        int Id;
+        public int Id { get; set; }
         public string Name { get; set; }
     }
 }
