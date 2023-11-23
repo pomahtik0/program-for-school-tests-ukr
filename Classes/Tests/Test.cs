@@ -10,6 +10,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
     {
         public string Name { get; set; }
         public Teacher Owner { get; set; }
+        public string Description { get; set; }
         public bool IsRandomOrdered { get; set; }
         public bool GetRandomTests { get; set; } // Обрати випадкові запитання зі списку
         public int QuestionCount { get; set; } // Кількість запитань
