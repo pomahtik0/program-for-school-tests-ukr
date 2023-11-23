@@ -12,11 +12,11 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-                <ListView></ListView>
+                <ListView Height="100"></ListView>
                 <DockPanel>
-                    <Button>1</Button>
-                    <Button>2</Button>
-                    <Button>3</Button>
+                    <Button>Create</Button>
+                    <Button>Delete</Button>
+                    <Button>Update</Button>
                 </DockPanel>
             </StackPanel>
             <Label Grid.Column="1">Опис</Label>
