@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace program_for_school_tests_ukr.Classes
 {
-    internal class Student : User
+    public class Student : User
     {
         //поле з історією тестування
 
