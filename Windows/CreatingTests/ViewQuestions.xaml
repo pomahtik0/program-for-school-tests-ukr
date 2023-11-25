@@ -12,7 +12,13 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <ListView Height="100"></ListView>
+            <StackPanel Orientation="Horizontal">
+                <ListView Height="100"></ListView>
+                <StackPanel>
+                    <Button>up</Button>
+                    <Button>down</Button>
+                </StackPanel>
+            </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Button>Create</Button>
                 <Button>Delete</Button>
