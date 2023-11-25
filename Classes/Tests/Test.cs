@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
-    internal class Test
+    public class Test
     {
         public int Id { get; set; }
         public string Name { get; set; }

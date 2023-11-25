@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
-    internal class Mark
+    public class Mark
     {
         public int Id {  get; set; }
         public int CurrentMark { get; set; }
