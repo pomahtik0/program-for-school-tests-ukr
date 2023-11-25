@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="ViewQuestions" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
     </Grid>
 </Window>
