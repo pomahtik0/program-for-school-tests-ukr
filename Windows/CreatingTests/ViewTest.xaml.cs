@@ -36,7 +36,6 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             ViewQuestions viewQuestions = new ViewQuestions(ref newTest);
             viewQuestions.Owner = this;
             viewQuestions.Show();
-            this.Hide();
         }
     }
 }
