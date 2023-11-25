@@ -25,5 +25,10 @@
                 <Button>Update</Button>
             </StackPanel>
         </StackPanel>
+
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1">
+            <Button>Зберегти</Button>
+            <Button>Відмінити</Button>
+        </StackPanel>
     </Grid>
 </Window>
