@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,15 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Owner.Show();
+        }
+
+        private void CreateTest_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Test newTest = new Test();
+            ViewQuestions viewQuestions = new ViewQuestions(ref newTest);
+            viewQuestions.Owner = this;
+            viewQuestions.Show();
+            this.Hide();
         }
     }
 }

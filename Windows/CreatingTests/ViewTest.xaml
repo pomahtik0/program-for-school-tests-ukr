@@ -14,7 +14,7 @@
         <StackPanel>
                 <ListView Height="100"></ListView>
                 <DockPanel>
-                    <Button>Create</Button>
+                    <Button Click="CreateTest_Button_Click">Create</Button>
                     <Button>Delete</Button>
                     <Button>Update</Button>
                 </DockPanel>
