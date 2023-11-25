@@ -12,15 +12,15 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-                <ListView Height="100"></ListView>
-                <DockPanel>
-                    <Button Click="CreateTest_Button_Click">Create</Button>
-                    <Button>Delete</Button>
-                    <Button>Update</Button>
-                </DockPanel>
-            </StackPanel>
-            <Label Grid.Column="1">Опис</Label>
-            <Button HorizontalAlignment="Left" VerticalAlignment="Bottom">Exit</Button>
+            <ListView Height="100"></ListView>
+            <DockPanel>
+                <Button Click="CreateTest_Button_Click">Create</Button>
+                <Button>Delete</Button>
+                <Button>Update</Button>
+            </DockPanel>
+        </StackPanel>
+        <Label Grid.Column="1">Опис</Label>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom">Exit</Button>
         <Label HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1">ім'я</Label>
     </Grid>
 </Window>
