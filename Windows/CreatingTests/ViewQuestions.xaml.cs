@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
     /// </summary>
     public partial class ViewQuestions : Window
     {
-        public ViewQuestions()
+        public Test currentTest;
+        public ViewQuestions(ref Test currentTest)
         {
+            this.currentTest = currentTest;
             InitializeComponent();
         }
     }
