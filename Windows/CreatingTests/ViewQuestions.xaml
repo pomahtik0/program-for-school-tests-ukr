@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.CreatingTests"
         mc:Ignorable="d"
-        Title="ViewQuestions" Height="450" Width="800">
+        Title="ViewQuestions" Name="window" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
@@ -28,7 +28,7 @@
 
         <StackPanel Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <TextBox Width="200" x:Name="testName" Text="{Binding Path=Name, Mode=TwoWay}"></TextBox>
+                <TextBox Width="200" x:Name="testName" Text="{Binding Name, Mode=TwoWay}"></TextBox>
                 <Label>Назва тесту</Label>
             </StackPanel>
 
