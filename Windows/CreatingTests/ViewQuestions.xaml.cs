@@ -21,12 +21,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
     public partial class ViewQuestions : Window
     {
         public Test currentTest;
-        public ViewQuestions(ref Test currentTest)
+        public ViewQuestions(int testId)
         {
-            this.currentTest = currentTest;
             InitializeComponent();
         }
-
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             //save object
