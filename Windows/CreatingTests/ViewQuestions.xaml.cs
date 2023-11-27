@@ -53,5 +53,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             SetCurrentTest(currentTest.Id);
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
     }
 }
