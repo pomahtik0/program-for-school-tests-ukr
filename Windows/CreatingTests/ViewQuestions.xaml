@@ -33,7 +33,8 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox Height="200" Width="200" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"></TextBox>
+                <TextBox Height="200" Width="200" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                         Text="{Binding Desctiption, Mode=TwoWay}"/>
                 <Label VerticalAlignment="Center">Короткий опис</Label>
             </StackPanel>
         </StackPanel>
