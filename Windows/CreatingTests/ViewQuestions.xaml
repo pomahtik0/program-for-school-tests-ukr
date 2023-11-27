@@ -33,7 +33,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <RichTextBox Height="200" Width="200"></RichTextBox>
+                <TextBox Height="200" Width="200" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"></TextBox>
                 <Label VerticalAlignment="Center">Короткий опис</Label>
             </StackPanel>
         </StackPanel>
