@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.CreatingTests"
+        xmlns:data="clr-namespace:program_for_school_tests_ukr.Classes.Tests"
         mc:Ignorable="d"
         Title="ViewQuestions" Height="450" Width="800">
+    <Window.DataContext>
+        <data:Test/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
