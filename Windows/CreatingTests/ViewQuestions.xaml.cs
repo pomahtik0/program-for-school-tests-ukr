@@ -1,4 +1,5 @@
-﻿using program_for_school_tests_ukr.Classes.Tests;
+﻿using program_for_school_tests_ukr.Classes;
+using program_for_school_tests_ukr.Classes.Tests;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,8 +29,12 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
 
         private void SetCurrentTest(int testId)
         {
-            if (testId == 0) currentTest = new Test();
-            else ; // прочитати з БД
+            if (testId == 0)
+            {
+                currentTest = new Test();
+                currentTest.Owner = (Teacher)User.CurrentUser;
+            }
+            else; // прочитати з БД
         }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
