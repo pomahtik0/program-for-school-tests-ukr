@@ -21,7 +21,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
     /// </summary>
     public partial class ViewQuestions : Window
     {
-        public Test currentTest;
+        public Test currentTest = new Test();
         public ViewQuestions(int testId)
         {
             InitializeComponent();
