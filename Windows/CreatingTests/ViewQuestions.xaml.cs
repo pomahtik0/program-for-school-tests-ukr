@@ -24,6 +24,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         public Test currentTest;
         public ViewQuestions(int testId)
         {
+            SetCurrentTest(testId);
             InitializeComponent();
         }
 
