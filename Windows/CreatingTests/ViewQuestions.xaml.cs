@@ -48,7 +48,6 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             //save object
-            MessageBox.Show(currentTest.Name);
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
