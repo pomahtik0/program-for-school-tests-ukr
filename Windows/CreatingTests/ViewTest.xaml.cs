@@ -33,7 +33,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         private void CreateTest_Button_Click(object sender, RoutedEventArgs e)
         {
             Test newTest = new Test();
-            ViewQuestions viewQuestions = new ViewQuestions(ref newTest);
+            ViewQuestions viewQuestions = new ViewQuestions(0); // create empty test
             viewQuestions.Owner = this;
             viewQuestions.Show();
         }
