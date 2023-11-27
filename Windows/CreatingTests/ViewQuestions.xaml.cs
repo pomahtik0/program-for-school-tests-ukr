@@ -35,7 +35,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
                 currentTest = new Test();
                 try
                 {
-                    currentTest.Owner = User.CurrentUser as Teacher;
+                    currentTest.Owner = (Teacher)User.CurrentUser;
                 }
                 catch 
                 {
