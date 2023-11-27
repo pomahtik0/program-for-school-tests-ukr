@@ -52,7 +52,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            SetCurrentTest(currentTest.Id);
         }
     }
 }
