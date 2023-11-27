@@ -24,8 +24,8 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         public Test currentTest;
         public ViewQuestions(int testId)
         {
-            SetCurrentTest(testId);
             InitializeComponent();
+            SetCurrentTest(testId);
         }
 
         private void SetCurrentTest(int testId)
@@ -37,16 +37,18 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
                 {
                     currentTest.Owner = (Teacher)User.CurrentUser;
                 }
-                catch 
+                catch
                 {
                     throw new Exception("unnexpected error with current user");
                 }
             }
-            else; // прочитати з БД
+            else ; // прочитати з БД
+            window.DataContext = currentTest;
         }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             //save object
+            MessageBox.Show(currentTest.Name);
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
