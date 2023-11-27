@@ -56,7 +56,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
+            if(MessageBox.Show("Зберегти данні перед виходом?", "Вихід", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                //save object
+            }
         }
     }
 }
