@@ -16,6 +16,6 @@ namespace program_for_school_tests_ukr.Classes
         public string Username { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
-        public static User? CurrentUser {get; set;}
+        public static User CurrentUser {get; set;}
     }
 }
