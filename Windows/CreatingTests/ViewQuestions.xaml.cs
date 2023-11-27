@@ -29,7 +29,8 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //save object
+            Close();
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
