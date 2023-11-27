@@ -25,6 +25,11 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             InitializeComponent();
         }
+
+        private void SetCurrentTest(int testId)
+        {
+
+        }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             //save object
