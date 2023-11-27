@@ -33,7 +33,14 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             if (testId == 0)
             {
                 currentTest = new Test();
-                currentTest.Owner = (Teacher)User.CurrentUser;
+                try
+                {
+                    currentTest.Owner = User.CurrentUser as Teacher;
+                }
+                catch 
+                {
+                    throw new Exception("unnexpected error with current user");
+                }
             }
             else; // прочитати з БД
         }
