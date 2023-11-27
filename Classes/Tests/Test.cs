@@ -18,5 +18,6 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int[] LeveledQuestionCount { get; set; } = new int[3];// Кількість
         public List<Mark> Marks { get; set; } = new List<Mark>();
         public List<Question> questions { get; set; } = new List<Question>();
+        //предмет
     }
 }
