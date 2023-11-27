@@ -38,7 +38,7 @@
             </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1">
-            <Button>Зберегти</Button>
+            <Button Click="SaveButton_Click">Зберегти</Button>
             <Button>Відмінити</Button>
         </StackPanel>
     </Grid>
