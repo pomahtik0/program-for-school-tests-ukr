@@ -29,6 +29,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            // TODO: перевірка на нульові значення
             questionName.GetBindingExpression(TextBox.TextProperty).UpdateSource();
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
