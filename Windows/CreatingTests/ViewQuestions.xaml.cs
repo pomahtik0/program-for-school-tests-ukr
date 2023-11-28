@@ -52,6 +52,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             {
                 dbContext.Add(currentTest);
                 dbContext.SaveChanges();
+                DialogResult = true; // дані було збережено
             }
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
