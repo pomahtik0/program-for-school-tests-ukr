@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
     /// </summary>
     public partial class CreateRedactQuestion : Window
     {
-        public CreateRedactQuestion()
+        Question currentQuestion;
+        public CreateRedactQuestion(Question currentQuestion)
         {
+            this.currentQuestion = currentQuestion;
             InitializeComponent();
         }
     }
