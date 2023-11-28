@@ -64,10 +64,14 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
 
         private void CreateNewQuestion_Click(object sender, RoutedEventArgs e)
         {
-            CreateRedactQuestion questionWindow = new CreateRedactQuestion(new Question());
+            Question newQuestion = new Question();
+            CreateRedactQuestion questionWindow = new CreateRedactQuestion(newQuestion);
             questionWindow.Owner = this;
             this.Hide();
-            questionWindow.ShowDialog();
+            if (questionWindow.ShowDialog() == true)
+            {
+                currentTest.questions.Add(newQuestion);
+            }
             this.Show();
         }
     }
