@@ -26,5 +26,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             this.currentQuestion = currentQuestion;
             InitializeComponent();
         }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
