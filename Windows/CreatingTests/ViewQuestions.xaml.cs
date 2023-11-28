@@ -1,5 +1,6 @@
 ﻿using program_for_school_tests_ukr.Classes;
 using program_for_school_tests_ukr.Classes.Tests;
+using program_for_school_tests_ukr.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,11 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            //save object
+            using(var dbContext = new ApplicationContext())
+            {
+                dbContext.Add(currentTest);
+                dbContext.SaveChanges();
+            }
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
