@@ -17,7 +17,13 @@
                     <Button>up</Button>
                     <Button>down</Button>
                 </StackPanel>
-                <ListView Height="100" ItemsSource="{Binding questions, Mode=TwoWay}"></ListView>
+                <ListView x:Name="questionList" Height="100" ItemsSource="{Binding questions, Mode=TwoWay}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
             </DockPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateNewQuestion_Click">Create</Button>
