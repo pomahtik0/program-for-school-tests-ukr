@@ -10,7 +10,7 @@
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label>Question Name</Label>
-                <TextBox Width="200" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
+                <TextBox x:Name="questionName" Width="200" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             </StackPanel>
         </StackPanel>
 
