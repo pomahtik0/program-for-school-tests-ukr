@@ -31,6 +31,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             // TODO: перевірка на нульові значення
             questionName.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            this.DialogResult = true;
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
