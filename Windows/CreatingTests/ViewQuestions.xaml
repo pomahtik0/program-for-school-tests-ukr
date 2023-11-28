@@ -20,7 +20,7 @@
                 <ListView Height="100"></ListView>
             </DockPanel>
             <StackPanel Orientation="Horizontal">
-                <Button>Create</Button>
+                <Button Click="CreateNewQuestion_Click">Create</Button>
                 <Button>Delete</Button>
                 <Button>Update</Button>
             </StackPanel>
