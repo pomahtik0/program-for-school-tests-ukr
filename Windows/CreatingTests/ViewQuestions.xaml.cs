@@ -61,5 +61,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
                 //save object
             }
         }
+
+        private void CreateNewQuestion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
