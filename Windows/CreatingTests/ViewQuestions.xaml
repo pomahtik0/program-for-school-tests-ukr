@@ -17,7 +17,7 @@
                     <Button>up</Button>
                     <Button>down</Button>
                 </StackPanel>
-                <ListView Height="100"></ListView>
+                <ListView Height="100" ItemsSource="{Binding questions, Mode=TwoWay}"></ListView>
             </DockPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateNewQuestion_Click">Create</Button>
