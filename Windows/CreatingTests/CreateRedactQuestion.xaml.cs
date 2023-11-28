@@ -35,5 +35,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
 
         }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            DataContext = currentQuestion;
+        }
     }
 }
