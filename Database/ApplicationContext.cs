@@ -13,6 +13,8 @@ namespace program_for_school_tests_ukr.Database
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Test> Tests { get; set; }
+        public DbSet<Mark> Marks { get; set; }
+        public DbSet<Question> Question { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pomahtik\source\repos\program for school tests ukr\Database\Database.mdf"";Integrated Security=True;Connect Timeout=30");
