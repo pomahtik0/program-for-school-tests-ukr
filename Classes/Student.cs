@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace program_for_school_tests_ukr.Classes
 {
     public class Student : User
     {
-        //поле з історією тестування
+        public List<Mark> marks = new List<Mark>();
 
         //класс
 
