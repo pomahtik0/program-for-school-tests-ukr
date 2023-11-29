@@ -1,4 +1,6 @@
-﻿using program_for_school_tests_ukr.Classes.Tests;
+﻿using program_for_school_tests_ukr.Classes;
+using program_for_school_tests_ukr.Classes.Tests;
+using program_for_school_tests_ukr.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +22,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
     /// </summary>
     public partial class ViewTest : Window
     {
+        List<Test> Tests;
         public ViewTest()
         {
             InitializeComponent();
@@ -39,7 +42,9 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            using (var dbcontext = new ApplicationContext()) {
+                Tests = dbcontext.Tests.Where(x=>x.Owner == User.CurrentUser).ToList();
+            }
         }
     }
 }
