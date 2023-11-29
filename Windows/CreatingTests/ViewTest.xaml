@@ -12,7 +12,14 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <ListView Height="100"></ListView>
+            <ListView Height="100">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name"/>
+                        <GridViewColumn Header="Date"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateTest_Button_Click">Create</Button>
                 <Button>Delete</Button>
