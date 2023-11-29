@@ -50,7 +50,8 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             using(var dbContext = new ApplicationContext())
             {
-                dbContext.Add(currentTest);
+                dbContext.Attach(currentTest.Owner);
+                dbContext.Tests.Add(currentTest);
                 dbContext.SaveChanges();
                 DialogResult = true; // дані було збережено
             }
