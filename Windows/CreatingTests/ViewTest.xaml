@@ -15,7 +15,7 @@
             <ListView Height="100">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Name"/>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name, Mode=TwoWay}"/>
                         <GridViewColumn Header="Date"/>
                     </GridView>
                 </ListView.View>
