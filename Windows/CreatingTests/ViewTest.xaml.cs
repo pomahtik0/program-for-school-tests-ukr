@@ -36,5 +36,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             viewQuestions.Owner = this;
             viewQuestions.Show();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
