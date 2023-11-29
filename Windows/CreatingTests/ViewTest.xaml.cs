@@ -45,6 +45,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             using (var dbcontext = new ApplicationContext()) {
                 Tests = dbcontext.Tests.Where(x=>x.Owner == User.CurrentUser).ToList();
             }
+            DataContext = Tests;
         }
     }
 }
