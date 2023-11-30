@@ -91,6 +91,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         }
         private bool SaveTest()
         {
+            //додати перевірки на введенні поля
             try
             {
                 using (var dbContext = new ApplicationContext())
