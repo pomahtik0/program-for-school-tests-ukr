@@ -23,7 +23,7 @@
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateTest_Button_Click">Create</Button>
                 <Button>Delete</Button>
-                <Button>Update</Button>
+                <Button IsEnabled="{Binding SelectedItem, ElementName=listOfTests}">Update</Button>
             </StackPanel>
         </StackPanel>
         <Label Grid.Column="1" Content="{Binding SelectedItem.Description, ElementName=listOfTests}"></Label>
