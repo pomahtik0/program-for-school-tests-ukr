@@ -62,7 +62,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            SaveTest();
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
@@ -73,7 +73,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             if(MessageBox.Show("Зберегти данні перед виходом?", "Вихід", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                //save object
+                SaveTest();
             }
         }
 
