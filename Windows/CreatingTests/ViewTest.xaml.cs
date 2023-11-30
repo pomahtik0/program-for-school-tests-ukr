@@ -37,7 +37,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             ViewQuestions viewQuestions = new ViewQuestions(0); // create empty test
             viewQuestions.Owner = this;
-            viewQuestions.Show();
+            viewQuestions.ShowDialog();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
