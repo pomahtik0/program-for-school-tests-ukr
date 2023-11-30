@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.CreatingTests"
+        xmlns:converters="clr-namespace:program_for_school_tests_ukr.Classes.ValueConverters"
         mc:Ignorable="d"
         Title="ViewTest" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Resources>
+        <converters:ButtonEnabled x:Key="converter"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
@@ -23,7 +27,7 @@
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateTest_Button_Click">Create</Button>
                 <Button>Delete</Button>
-                <Button IsEnabled="{Binding SelectedItem, ElementName=listOfTests}">Update</Button>
+                <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource converter}, ElementName=listOfTests}">Update</Button>
             </StackPanel>
         </StackPanel>
         <Label Grid.Column="1" Content="{Binding SelectedItem.Description, ElementName=listOfTests}"></Label>
