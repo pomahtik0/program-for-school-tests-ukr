@@ -12,7 +12,7 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <ListView Height="100" ItemsSource="{Binding}">
+            <ListView Name="listOfTests" Height="100" ItemsSource="{Binding}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name, Mode=TwoWay}"/>
@@ -26,7 +26,7 @@
                 <Button>Update</Button>
             </StackPanel>
         </StackPanel>
-        <Label Grid.Column="1">Опис</Label>
+        <Label Grid.Column="1" Content="{Binding SelectedItem.Description, ElementName=listOfTests}"></Label>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom">Exit</Button>
         <Label HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1">ім'я</Label>
     </Grid>
