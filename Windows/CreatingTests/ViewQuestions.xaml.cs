@@ -3,6 +3,7 @@ using program_for_school_tests_ukr.Classes.Tests;
 using program_for_school_tests_ukr.Database;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -43,7 +45,18 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
                     throw new Exception("unnexpected error with current user");
                 }
             }
-            else ; // прочитати з БД
+            else
+            {
+                using(var dbcontext = new ApplicationContext())
+                try
+                {
+                        currentTest = dbcontext.Tests.First(x => x.Id == testId);
+                }
+                catch
+                {
+                        MessageBox.Show("Тест не знайдено!");
+                }
+            }
             window.DataContext = currentTest;
         }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
