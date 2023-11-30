@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -61,13 +62,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         }
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            using(var dbContext = new ApplicationContext())
-            {
-                dbContext.Attach(currentTest.Owner);
-                dbContext.Tests.Add(currentTest);
-                dbContext.SaveChanges();
-                DialogResult = true; // дані було збережено
-            }
+            
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
@@ -93,6 +88,31 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
                 currentTest.questions.Add(newQuestion);
             }
             this.Show();
+        }
+        private bool SaveTest()
+        {
+            try
+            {
+                using (var dbContext = new ApplicationContext())
+                {
+                    dbContext.Attach(currentTest.Owner);
+                    dbContext.Tests.Add(currentTest);
+                    dbContext.SaveChanges();
+                    DialogResult = true; // дані було збережено
+                }
+            }
+            catch(InvalidOperationException)
+            {
+                Debug.WriteLine("can't save dialog result for non dialog window");
+                return false;
+            }
+            catch
+            {
+                Debug.WriteLine("some other db error");
+                return false;
+            }
+            
+            return true;
         }
     }
 }
