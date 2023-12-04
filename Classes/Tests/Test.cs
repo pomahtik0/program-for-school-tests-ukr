@@ -28,6 +28,6 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public bool IsRandomOrdered { get; set; }
         public bool IsTrainingTest { get; set; }
         public List<Mark> Marks { get; set; } = new List<Mark>();
-        public List<Question> questions { get; set; } = new List<Question>();
+        public List<Question> Questions { get; set; } = new List<Question>();
     }
 }
