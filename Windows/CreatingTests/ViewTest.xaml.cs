@@ -47,5 +47,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             }
             DataContext = Tests;
         }
+
+        private void DeleteTest_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

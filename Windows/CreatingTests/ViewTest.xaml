@@ -26,7 +26,7 @@
             </ListView>
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateTest_Button_Click">Create</Button>
-                <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource converter}, ElementName=listOfTests}">Delete</Button>
+                <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource converter}, ElementName=listOfTests}" Click="DeleteTest_Button_Click">Delete</Button>
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource converter}, ElementName=listOfTests}">Update</Button>
             </StackPanel>
         </StackPanel>
