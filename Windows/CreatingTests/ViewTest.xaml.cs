@@ -56,6 +56,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
                 try
                 {
                     Test testToDelete = listOfTests.SelectedItem as Test;
+                    Debug.WriteLine($"{testToDelete.Name} {testToDelete.Description}");
                     dbcontext.Remove(testToDelete);
                     dbcontext.SaveChanges();
                 }
@@ -69,6 +70,11 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         private void UpdateTest_Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void UpdateDataContext()
+        { 
+        
         }
     }
 }
