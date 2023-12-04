@@ -56,9 +56,9 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
                 try
                 {
                     Test testToDelete = listOfTests.SelectedItem as Test;
-                    Debug.WriteLine($"{testToDelete.Name} {testToDelete.Description}");
-                    dbcontext.Remove(testToDelete);
+                    dbcontext.Tests.Remove(testToDelete);
                     dbcontext.SaveChanges();
+                    Tests.Remove(testToDelete);
                 }
                 catch
                 {
