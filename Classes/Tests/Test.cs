@@ -22,6 +22,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int Id { get; set; }
         public string Name { get; set; }
         public Teacher Owner { get; set; }
+        public DateOnly DateOfLastRedaction { get; set; }
         public string Description { get; set; }
         public Subject TestSubject { get; set; }
         public bool IsRandomOrdered { get; set; }
