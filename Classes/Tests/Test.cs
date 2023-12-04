@@ -7,6 +7,16 @@ using System.Threading.Tasks;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
+    enum Subject
+    {
+        Математика,
+        Фізика,
+        Хімія,
+        Українська,
+        Іноземна,
+        Література,
+        Історія
+    }
     public class Test
     {
         public int Id { get; set; }
