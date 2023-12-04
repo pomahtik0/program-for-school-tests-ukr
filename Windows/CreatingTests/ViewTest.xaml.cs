@@ -3,6 +3,7 @@ using program_for_school_tests_ukr.Classes.Tests;
 using program_for_school_tests_ukr.Database;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,7 +51,19 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
 
         private void DeleteTest_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            using (var dbcontext = new ApplicationContext())
+            {
+                try
+                {
+                    Test testToDelete = listOfTests.SelectedItem as Test;
+                    dbcontext.Remove(testToDelete);
+                    dbcontext.SaveChanges();
+                }
+                catch
+                {
+                    Debug.WriteLine("error when deleting test");
+                }
+            }
         }
 
         private void UpdateTest_Button_Click(object sender, RoutedEventArgs e)
