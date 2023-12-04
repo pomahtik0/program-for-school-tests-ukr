@@ -16,7 +16,7 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <ListView Name="listOfTests" Height="100" ItemsSource="{Binding}">
+            <ListView Name="listOfTests" Height="100" ItemsSource="{Binding Path, Mode=TwoWay}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name, Mode=TwoWay}"/>
