@@ -26,6 +26,12 @@ namespace program_for_school_tests_ukr.Database
                 .HasDiscriminator<string>("User_type")
                 .HasValue<Student>("Student")
                 .HasValue<Teacher>("Teacher");
+
+            modelBuilder.Entity<Question>()
+                .HasOne(e => e.ActualAnswer)
+                .WithOne(e => e.AnswerToQuestion)
+                .HasForeignKey<Answer>("AnswerToQuestionId")
+                .IsRequired();
         }
     }
 }
