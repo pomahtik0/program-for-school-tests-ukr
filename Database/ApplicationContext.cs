@@ -32,6 +32,7 @@ namespace program_for_school_tests_ukr.Database
                 .WithOne(e => e.AnswerToQuestion)
                 .HasForeignKey<Answer>("AnswerToQuestionId")
                 .IsRequired();
+
         }
     }
 }
