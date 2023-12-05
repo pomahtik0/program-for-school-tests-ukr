@@ -85,7 +85,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             this.Hide();
             if (questionWindow.ShowDialog() == true)
             {
-                currentTest.questions.Add(newQuestion);
+                currentTest.Questions.Add(newQuestion);
             }
             this.Show();
         }
