@@ -11,7 +11,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int Id {  get; set; }
         public int CurrentMark { get; set; }
         public int MaxMark { get; set; }
-        public Test Test { get; set; }
-        public Student MarkOfStudent { get; set; }
+        public Test Test { get; set; } = null!;
+        public Student MarkOfStudent { get; set; } = null!;
     }
 }
