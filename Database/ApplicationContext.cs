@@ -33,12 +33,12 @@ namespace program_for_school_tests_ukr.Database
                 .HasForeignKey<Answer>("AnswerToQuestionId")
                 .IsRequired();
 
-            modelBuilder.Entity<Mark>()
-                .HasOne(e => e.Test)
-                .WithMany(e => e.Marks)
+            modelBuilder.Entity<Mark>()                 // no cascade, due to sql server restrictions
+                .HasOne(e => e.Test)                    // should consider about switching to mysql
+                .WithMany(e => e.Marks)                 // or delete marks manualy before deleting test
                 .HasForeignKey("TestId")
                 .IsRequired()
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict); 
         }
     }
 }
