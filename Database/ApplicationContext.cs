@@ -23,8 +23,8 @@ namespace program_for_school_tests_ukr.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-                .HasDiscriminator<string>("User_type")
-                .HasValue<Student>("Student")
+                .HasDiscriminator<string>("User_type")  //creating separator field for different type of users
+                .HasValue<Student>("Student")           
                 .HasValue<Teacher>("Teacher");
 
             modelBuilder.Entity<Question>()
