@@ -9,7 +9,7 @@ namespace program_for_school_tests_ukr.Classes
 {
     public class Teacher : User
     {
-        public List<Test>? OwnedTests { get; set; }
+        public List<Test> OwnedTests { get; } = new List<Test>();
 
         //поле для пройдених учнями тестів з оцінками, потім реалізую
         public override string ToString()
