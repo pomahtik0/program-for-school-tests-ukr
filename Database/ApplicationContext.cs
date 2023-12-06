@@ -33,6 +33,12 @@ namespace program_for_school_tests_ukr.Database
                 .HasForeignKey<Answer>("AnswerToQuestionId")
                 .IsRequired();
 
+            modelBuilder.Entity<Mark>()
+                .HasOne(e => e.Test)
+                .WithMany(e => e.Marks)
+                .HasForeignKey("TestId")
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
