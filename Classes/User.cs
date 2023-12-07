@@ -9,7 +9,6 @@ using System.Reflection.Metadata;
 
 namespace program_for_school_tests_ukr.Classes
 {
-    //TODO: Update database fields, update dbcontext
     public abstract class User
     {
         public int Id { get; set; }
