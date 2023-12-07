@@ -40,8 +40,8 @@
             </DockPanel>
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateNewQuestion_Click">Create</Button>
-                <Button>Delete</Button>
-                <Button>Update</Button>
+                <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Delete</Button>
+                <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Update</Button>
             </StackPanel>
         </StackPanel>
 
