@@ -26,6 +26,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public DateOnly DateOfLastRedaction { get; set; }
         public string Description { get; set; }
         public Subject TestSubject { get; set; }
+        //TODO: кількість запитань які взяти
         public bool IsRandomOrdered { get; set; }
         public bool IsTrainingTest { get; set; }
         public List<Mark> Marks { get; } = new List<Mark>();

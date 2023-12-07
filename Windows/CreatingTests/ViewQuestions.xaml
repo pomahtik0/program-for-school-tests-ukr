@@ -43,6 +43,8 @@
                          Text="{Binding Description, Mode=TwoWay}"/>
                 <Label VerticalAlignment="Center">Короткий опис</Label>
             </StackPanel>
+            <CheckBox>Тренувальний</CheckBox>
+            <CheckBox>Випадковий порядок запитань</CheckBox>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1">
             <Button Click="SaveButton_Click">Зберегти</Button>
