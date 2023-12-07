@@ -45,6 +45,11 @@
             </StackPanel>
             <CheckBox>Тренувальний</CheckBox>
             <CheckBox>Випадковий порядок запитань</CheckBox>
+            <StackPanel Orientation="Horizontal">
+                <TextBox Width="50"></TextBox>
+                <Label>Кількість запитаннь</Label>
+            </StackPanel>
+            
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1">
             <Button Click="SaveButton_Click">Зберегти</Button>
