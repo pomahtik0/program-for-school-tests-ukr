@@ -60,7 +60,7 @@
                 <Label>Кількість запитаннь</Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox Width="200" ItemsSource="{Binding Source={StaticResource EnumDataSource}}" SelectedItem="{Binding Subject, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <ComboBox Width="200" ItemsSource="{Binding Source={StaticResource EnumDataSource}}" SelectedItem="{Binding TestSubject, Mode=TwoWay}" HorizontalAlignment="Left"/>
                 <Label>Предмет</Label>
             </StackPanel>
         </StackPanel>
