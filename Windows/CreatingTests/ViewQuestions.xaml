@@ -49,11 +49,15 @@
                 <TextBox Width="50"></TextBox>
                 <Label>Кількість запитаннь</Label>
             </StackPanel>
-            
+            <StackPanel Orientation="Horizontal">
+                <ListBox Width="200" HorizontalAlignment="Left"/>
+                <Label>Предмет</Label>
+            </StackPanel>
         </StackPanel>
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1">
             <Button Click="SaveButton_Click">Зберегти</Button>
             <Button Click="CancelButton_Click">Відмінити</Button>
         </StackPanel>
+        
     </Grid>
 </Window>
