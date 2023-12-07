@@ -4,8 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.CreatingTests"
+        xmlns:enum="clr-namespace:program_for_school_tests_ukr.Classes.Tests"
         mc:Ignorable="d"
         Title="ViewQuestions" Name="window" Height="450" Width="800" Closing="Window_Closing">
+    <Window.Resources>
+        <ObjectDataProvider x:Key="EnumDataSource"
+                        ObjectType="{x:Type LocalValueEnumerator}"
+                        MethodName="GetValues">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="enum:Subject" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
@@ -50,7 +60,7 @@
                 <Label>Кількість запитаннь</Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ListBox Width="200" SelectedItem="{Binding Subject, Mode=TwoWay}" HorizontalAlignment="Left"/>
+                <ComboBox Width="200" ItemsSource="{Binding Source={StaticResource EnumDataSource}}" SelectedItem="{Binding Subject, Mode=TwoWay}" HorizontalAlignment="Left"/>
                 <Label>Предмет</Label>
             </StackPanel>
         </StackPanel>
