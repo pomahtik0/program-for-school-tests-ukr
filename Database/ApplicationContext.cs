@@ -36,7 +36,7 @@ namespace program_for_school_tests_ukr.Database
             modelBuilder.Entity<Mark>()                 // no cascade, due to sql server restrictions
                 .HasOne(e => e.Test)                    // should consider about switching to mysql
                 .WithMany(e => e.Marks)                 // or delete marks manualy before deleting test
-                .HasForeignKey("TestId")
+                .HasForeignKey("TestId")                // (two FK cascade prohibited)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict); 
         }
