@@ -50,7 +50,7 @@
                 <Label>Кількість запитаннь</Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ListBox Width="200" HorizontalAlignment="Left"/>
+                <ListBox Width="200" SelectedItem="{Binding Subject, Mode=TwoWay}" HorizontalAlignment="Left"/>
                 <Label>Предмет</Label>
             </StackPanel>
         </StackPanel>
