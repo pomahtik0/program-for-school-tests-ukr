@@ -9,6 +9,7 @@
         mc:Ignorable="d"
         Title="ViewQuestions" Name="window" Height="450" Width="800" Closing="Window_Closing">
     <Window.Resources>
+        <converters:ButtonEnabled x:Key="buttonEnabled"/>
         <ObjectDataProvider x:Key="EnumDataSource"
                         ObjectType="{x:Type test:Subject}"
                         MethodName="GetValues">
