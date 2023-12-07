@@ -21,6 +21,7 @@
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
+        
         <StackPanel>
             <DockPanel>
                 <StackPanel DockPanel.Dock="Right">
@@ -47,7 +48,6 @@
                 <TextBox Width="200" Text="{Binding Name, Mode=TwoWay}"></TextBox>
                 <Label>Назва тесту</Label>
             </StackPanel>
-
             <StackPanel Orientation="Horizontal">
                 <TextBox Height="200" Width="200" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
                          Text="{Binding Description, Mode=TwoWay}"/>
@@ -64,10 +64,10 @@
                 <Label>Предмет</Label>
             </StackPanel>
         </StackPanel>
+        
         <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1">
             <Button Click="SaveButton_Click">Зберегти</Button>
             <Button Click="CancelButton_Click">Відмінити</Button>
         </StackPanel>
-        
     </Grid>
 </Window>
