@@ -15,7 +15,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         Українська,
         Іноземна,
         Література,
-        Історія
+        Історія,
+        Інше
     }
     public class Test
     {
