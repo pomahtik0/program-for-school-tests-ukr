@@ -27,7 +27,7 @@
                     <Button>up</Button>
                     <Button>down</Button>
                 </StackPanel>
-                <ListView x:Name="questionList" Height="100" ItemsSource="{Binding Questions, Mode=TwoWay}">
+                <ListView x:Name="questionList" Height="100" ItemsSource="{Binding Questions, Mode=OneWay}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
