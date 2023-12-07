@@ -13,10 +13,6 @@ namespace program_for_school_tests_ukr.Classes
 
         //класс
 
-        //коментарі про учня, від інших вчителів
-
-        //можливо якась додаткова інформація
-
         public override string ToString()
         {
             return "Student";
