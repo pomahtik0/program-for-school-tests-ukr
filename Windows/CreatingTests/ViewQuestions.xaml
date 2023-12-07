@@ -9,7 +9,7 @@
         Title="ViewQuestions" Name="window" Height="450" Width="800" Closing="Window_Closing">
     <Window.Resources>
         <ObjectDataProvider x:Key="EnumDataSource"
-                        ObjectType="{x:Type LocalValueEnumerator}"
+                        ObjectType="{x:Type enum:Subject}"
                         MethodName="GetValues">
             <ObjectDataProvider.MethodParameters>
                 <x:Type TypeName="enum:Subject" />
