@@ -4,15 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.CreatingTests"
-        xmlns:enum="clr-namespace:program_for_school_tests_ukr.Classes.Tests"
+        xmlns:test="clr-namespace:program_for_school_tests_ukr.Classes.Tests"
         mc:Ignorable="d"
         Title="ViewQuestions" Name="window" Height="450" Width="800" Closing="Window_Closing">
     <Window.Resources>
         <ObjectDataProvider x:Key="EnumDataSource"
-                        ObjectType="{x:Type enum:Subject}"
+                        ObjectType="{x:Type test:Subject}"
                         MethodName="GetValues">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="enum:Subject" />
+                <x:Type TypeName="test:Subject" />
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
