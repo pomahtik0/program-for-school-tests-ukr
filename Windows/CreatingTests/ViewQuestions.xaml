@@ -23,6 +23,10 @@
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"></RowDefinition>
+        </Grid.RowDefinitions>
         
         <StackPanel>
             <ListView x:Name="questionList" Height="100" ItemsSource="{Binding Questions, Mode=OneWay}">
@@ -44,7 +48,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Column="1">
+        <StackPanel Grid.Column="1" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal">
                 <TextBox Width="200" Text="{Binding Name, Mode=TwoWay}"></TextBox>
                 <Label>Назва тесту</Label>
@@ -66,7 +70,7 @@
             </StackPanel>
         </StackPanel>
         
-        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Column="1">
+        <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
             <Button Click="SaveButton_Click">Зберегти</Button>
             <Button Click="CancelButton_Click">Відмінити</Button>
         </StackPanel>
