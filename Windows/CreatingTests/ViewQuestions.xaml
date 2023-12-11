@@ -23,17 +23,15 @@
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
-        
+
         <StackPanel>
-            <DockPanel>
-                <ListView x:Name="questionList" Height="100" ItemsSource="{Binding Questions, Mode=OneWay}">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </DockPanel>
+            <ListView x:Name="questionList" Height="100" ItemsSource="{Binding Questions, Mode=OneWay}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateNewQuestion_Click">Create</Button>
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Delete</Button>
