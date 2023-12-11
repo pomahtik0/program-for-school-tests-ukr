@@ -24,8 +24,8 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="0.2*"></RowDefinition>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.3*"></RowDefinition>
         </Grid.RowDefinitions>
         
         <ListView x:Name="questionList" ItemsSource="{Binding Questions, Mode=OneWay}">
