@@ -41,14 +41,14 @@
             </ListView.View>
         </ListView>
 
-        <StackPanel Grid.Row="1">
-            <StackPanel Orientation="Horizontal">
+        <DockPanel Grid.Row="1">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
                 <Button Click="CreateNewQuestion_Click">Create</Button>
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Delete</Button>
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Update</Button>
             </StackPanel>
             <TextBox TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Text="{Binding SelectedItem.QuestionText, ElementName=questionList}"/>
-        </StackPanel>
+        </DockPanel>
 
         <StackPanel Grid.Column="1" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal">
