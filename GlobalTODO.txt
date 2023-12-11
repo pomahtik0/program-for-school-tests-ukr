@@ -1,0 +1,2 @@
+﻿Add minwidth minheight to all windows(looks awfull)
+Change sizes in db of all fields
