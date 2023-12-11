@@ -50,7 +50,7 @@
                 <Label VerticalAlignment="Center">Короткий опис</Label>
             </StackPanel>
             <CheckBox>Тренувальний</CheckBox>
-            <CheckBox>Випадковий порядок запитань</CheckBox>
+            <CheckBox IsChecked="{Binding IsRandomOrdered, Mode=TwoWay}">Випадковий порядок запитань</CheckBox>
             <StackPanel Orientation="Horizontal">
                 <TextBox Width="50" IsEnabled="False" Text="{Binding Questions.Length, Mode=OneWay}"></TextBox>
                 <Label>Кількість запитаннь</Label>
