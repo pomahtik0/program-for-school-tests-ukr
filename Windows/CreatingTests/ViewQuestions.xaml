@@ -47,7 +47,7 @@
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Delete</Button>
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Update</Button>
             </StackPanel>
-            <Label Content="{Binding SelectedItem.Text, ElementName=questionList}"></Label>
+            <Label Content="{Binding SelectedItem.QuestionText, ElementName=questionList}"></Label>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.RowSpan="2">
