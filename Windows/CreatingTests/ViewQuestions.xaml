@@ -40,13 +40,14 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
         <StackPanel Grid.Row="1">
-            
             <StackPanel Orientation="Horizontal">
                 <Button Click="CreateNewQuestion_Click">Create</Button>
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Delete</Button>
                 <Button IsEnabled="{Binding SelectedItem, Converter={StaticResource buttonEnabled}, ElementName=questionList}" >Update</Button>
             </StackPanel>
+            <Label Content="{Binding SelectedItem.Text, ElementName=questionList}"></Label>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.RowSpan="2">
