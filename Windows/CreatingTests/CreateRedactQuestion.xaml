@@ -27,8 +27,8 @@
         <ListView x:Name="listOfAnswers" Grid.Row="1" ItemsSource="{Binding Answers}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <RadioButton GroupName="RealAnswer" IsChecked="{Binding Path=IsRealAnswer}">
-                        <TextBox Width="400" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Text="{Binding Path=AnswerText}"/>
+                    <RadioButton GroupName="RealAnswer" IsChecked="{Binding Path=IsRealAnswer, Mode=TwoWay}">
+                        <TextBox Width="400" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Text="{Binding Path=AnswerText, Mode=TwoWay}"/>
                     </RadioButton>
                 </DataTemplate>
             </ListView.ItemTemplate>
