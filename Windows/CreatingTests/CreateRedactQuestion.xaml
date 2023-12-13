@@ -24,7 +24,7 @@
             <Button Width="200">Add answer description</Button>
         </StackPanel>
         
-        <ListView Grid.Row="1">
+        <ListView Grid.Row="1" ItemsSource="{Binding Answers}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <RadioButton IsChecked="{Binding Path=IsRealAnswer}">
