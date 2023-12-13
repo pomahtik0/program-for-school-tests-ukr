@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="CreateRedactQuestion" Height="450" Width="800" Initialized="Window_Initialized">
     <Grid>
-        <StackPanel>
+        <DockPanel>
             <StackPanel Orientation="Horizontal">
                 <Label>Question Name</Label>
                 <TextBox x:Name="questionName" Width="200" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
@@ -21,7 +21,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>
+        </DockPanel>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <Button Click="SaveButton_Click">Зберегти</Button>
