@@ -17,6 +17,11 @@
                 <Label>Question Name</Label>
                 <TextBox x:Name="questionName" Width="200" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Question Text</Label>
+                <TextBox Width="300" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+            </StackPanel>
+            <Button>Add answer description</Button>
         </StackPanel>
         
         <ListView Grid.Row="1">
