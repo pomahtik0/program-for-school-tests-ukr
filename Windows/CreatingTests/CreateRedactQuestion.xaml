@@ -22,7 +22,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <RadioButton IsChecked="{Binding Path=IsRealAnswer}">
-                        <TextBox Text="{Binding Path=AnswerText}"></TextBox>
+                        <TextBox Width="400" Height="300" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Text="{Binding Path=AnswerText}"/>
                     </RadioButton>
                 </DataTemplate>
             </ListView.ItemTemplate>
