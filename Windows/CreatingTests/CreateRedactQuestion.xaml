@@ -12,23 +12,29 @@
             <RowDefinition/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label>Question Name</Label>
-                <TextBox x:Name="questionName" Width="200" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
-            </StackPanel>
-            <ListView>
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <RadioButton>
-                            <TextBox></TextBox>
-                        </RadioButton>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+        
+        <StackPanel Orientation="Horizontal">
+            <Label>Question Name</Label>
+            <TextBox x:Name="questionName" Width="200" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
         </StackPanel>
+            
+        <ListView Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <RadioButton>
+                        <TextBox></TextBox>
+                    </RadioButton>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListViewItem>
+                <StackPanel Orientation="Horizontal">
+                    <Button>Додати</Button>
+                    <Button>Видалити останій</Button>
+                </StackPanel>
+            </ListViewItem>
+        </ListView>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <Button Click="SaveButton_Click">Зберегти</Button>
             <Button Click="CancelButton_Click">Відмінити</Button>
         </StackPanel>
