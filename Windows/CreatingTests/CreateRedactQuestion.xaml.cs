@@ -42,5 +42,10 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         {
             DataContext = currentQuestion;
         }
+
+        private void AddNewAnswerButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
