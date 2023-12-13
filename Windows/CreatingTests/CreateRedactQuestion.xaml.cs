@@ -46,6 +46,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
         private void AddNewAnswerButton_Click(object sender, RoutedEventArgs e)
         {
             currentQuestion.Answers.Add(new Answer());
+            listOfAnswers.Items.Refresh();
         }
     }
 }
