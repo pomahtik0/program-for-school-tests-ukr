@@ -21,7 +21,7 @@
                 <Label>Question Text</Label>
                 <TextBox Width="300" Height="100" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
             </StackPanel>
-            <Button>Add answer description</Button>
+            <Button Width="200">Add answer description</Button>
         </StackPanel>
         
         <ListView Grid.Row="1">
