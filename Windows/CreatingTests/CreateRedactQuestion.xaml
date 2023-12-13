@@ -39,8 +39,7 @@
             <Button>Видалити останій</Button>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-            <Button Click="SaveButton_Click">Зберегти</Button>
-            <Button Click="CancelButton_Click">Відмінити</Button>
+            <Button Click="SaveAndExitButton_Click">Зберегти і вийти</Button>
         </StackPanel>
     </Grid>
 </Window>
