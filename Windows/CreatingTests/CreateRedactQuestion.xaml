@@ -15,7 +15,9 @@
             <ListView>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <RadioButton/>
+                        <RadioButton>
+                            <TextBox></TextBox>
+                        </RadioButton>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
