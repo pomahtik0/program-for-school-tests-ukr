@@ -27,12 +27,6 @@ namespace program_for_school_tests_ukr.Database
                 .HasValue<Student>("Student")           
                 .HasValue<Teacher>("Teacher");
 
-            modelBuilder.Entity<Question>()
-                .HasOne(e => e.ActualAnswer)
-                .WithOne(e => e.AnswerToQuestion)
-                .HasForeignKey<Answer>("AnswerToQuestionId")
-                .IsRequired();
-
             modelBuilder.Entity<Mark>()                 // no cascade, due to sql server restrictions
                 .HasOne(e => e.Test)                    // should consider about switching to mysql
                 .WithMany(e => e.Marks)                 // or delete marks manualy before deleting test
