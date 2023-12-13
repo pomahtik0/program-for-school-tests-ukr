@@ -27,7 +27,7 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             InitializeComponent();
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void SaveAndExitButton_Click(object sender, RoutedEventArgs e)
         {
             // TODO: перевірка на нульові значення
             this.DialogResult = true;
