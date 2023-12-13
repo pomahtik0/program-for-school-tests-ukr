@@ -34,7 +34,7 @@
             </ListView.ItemTemplate>
             <ListViewItem>
                 <StackPanel Orientation="Horizontal">
-                    <Button>Додати</Button>
+                    <Button Click="AddNewAnswerButton_Click">Додати</Button>
                     <Button>Видалити останій</Button>
                 </StackPanel>
             </ListViewItem>
