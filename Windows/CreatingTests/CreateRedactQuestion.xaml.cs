@@ -33,10 +33,6 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
             questionName.GetBindingExpression(TextBox.TextProperty).UpdateSource();
             this.DialogResult = true;
         }
-        private void CancelButton_Click(object sender, RoutedEventArgs e)
-        {
-            questionName.GetBindingExpression(TextBox.TextProperty).UpdateTarget();
-        }
 
         private void Window_Initialized(object sender, EventArgs e)
         {
