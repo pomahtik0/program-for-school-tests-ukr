@@ -12,6 +12,13 @@
                 <Label>Question Name</Label>
                 <TextBox x:Name="questionName" Width="200" Text="{Binding Path=Name, Mode=TwoWay, UpdateSourceTrigger=Explicit}"/>
             </StackPanel>
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <RadioButton/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom">
