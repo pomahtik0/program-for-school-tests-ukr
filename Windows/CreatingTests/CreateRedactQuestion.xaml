@@ -21,8 +21,8 @@
         <ListView Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <RadioButton>
-                        <TextBox></TextBox>
+                    <RadioButton IsChecked="{Binding Path=IsRealAnswer}">
+                        <TextBox Text="{Binding Path=AnswerText}"></TextBox>
                     </RadioButton>
                 </DataTemplate>
             </ListView.ItemTemplate>
