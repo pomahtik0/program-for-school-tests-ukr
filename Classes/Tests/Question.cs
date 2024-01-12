@@ -19,6 +19,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public string Name { get; set; } = "";
         public List<Answer> Answers { get; } = new List<Answer>();
         public Answer? ActualAnswer { get; set; }
+        [NotMapped] 
+        public Page? QuestionPage { get; private set; }
         public abstract Page Show();
         public abstract Page ShowInRedactMode();
     }
