@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,6 +14,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
     public abstract class Question
     {
         public int Id { get; private set; }
+        [Unicode]
+        [MaxLength(50)]
         public string Name { get; set; } = "";
         public List<Answer> Answers { get; } = new List<Answer>();
         public Answer? ActualAnswer { get; set; }
@@ -20,6 +25,9 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class QuestionAsText : Question
     {
+        [Unicode]
+        [MaxLength(256)]
+        [Column("Text")]
         public string Text { get; set; } = "";
         public override Page Show()
         {
@@ -62,6 +70,9 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class QuestionAsPictureAndText : QuestionAsPicture
     {
+        [Unicode]
+        [MaxLength(256)]
+        [Column("Text")]
         public string Text { get; set; } = "";
         public override Page Show()
         {
