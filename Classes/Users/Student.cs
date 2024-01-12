@@ -5,14 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace program_for_school_tests_ukr.Classes
+namespace program_for_school_tests_ukr.Classes.Users
 {
-    public class Teacher : User
+    public class Student : User
     {
-        public List<Test> OwnedTests { get; } = new List<Test>();
+        public List<Mark> Marks { get; } = new List<Mark>();
+
+        //класс
+
         public override string ToString()
         {
-            return "Teacher";
+            return "Student";
         }
     }
 }

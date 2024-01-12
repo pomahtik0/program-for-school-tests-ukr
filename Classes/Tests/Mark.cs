@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using program_for_school_tests_ukr.Classes.Users;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {

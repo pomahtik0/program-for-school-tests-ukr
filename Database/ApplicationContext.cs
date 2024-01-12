@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using program_for_school_tests_ukr.Classes;
 using program_for_school_tests_ukr.Classes.Tests;
+using program_for_school_tests_ukr.Classes.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;

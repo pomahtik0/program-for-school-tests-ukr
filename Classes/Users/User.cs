@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
-namespace program_for_school_tests_ukr.Classes
+namespace program_for_school_tests_ukr.Classes.Users
 {
     public abstract class User
     {
@@ -15,6 +15,6 @@ namespace program_for_school_tests_ukr.Classes
         public string Username { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
-        public static User CurrentUser {get; set;}
+        public static User CurrentUser { get; set; }
     }
 }
