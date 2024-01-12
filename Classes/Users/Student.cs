@@ -12,10 +12,5 @@ namespace program_for_school_tests_ukr.Classes.Users
         public List<Mark> Marks { get; } = new List<Mark>();
 
         //класс
-
-        public override string ToString()
-        {
-            return "Student";
-        }
     }
 }
