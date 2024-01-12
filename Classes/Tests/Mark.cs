@@ -9,10 +9,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 {
     public class Mark
     {
-        public int Id {  get; set; }
-        public int CurrentMark { get; set; }
-        public int MaxMark { get; set; }
-        public Test Test { get; set; } = null!;
-        public Student MarkOfStudent { get; set; } = null!;
+        public int Id {  get; private set; }
+        public int CurrentMark { get; private set; }
+        public int MaxMark { get; private set; }
+        public Test Test { get; private set; }
+        public Student MarkOfStudent { get; private set; }
     }
 }
