@@ -4,12 +4,15 @@ using System.IO;
 using System.Windows.Controls;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
     public abstract class Answer
     {
         public int Id { get; private set; }
+        [NotMapped]
+        public UserControl? UserControl { get; private set; }
         public abstract UserControl Show();
         public abstract UserControl ShowInRedactMode();
     }
