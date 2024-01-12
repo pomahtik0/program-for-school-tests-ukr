@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,48 @@ namespace program_for_school_tests_ukr.Classes.Tests
         {
             throw new NotImplementedException();
         }
+        public override Page ShowInRedactMode()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public class QuestionAsPicture : Question
+    {
+        public byte[]? Picture { get; protected set; }
+        protected virtual System.Drawing.Image GetImageFromArray()
+        {
+            if (Picture == null) throw new ArgumentNullException(nameof(Picture));
+            using (var ms = new MemoryStream(Picture))
+            {
+                var returnImage = System.Drawing.Image.FromStream(ms);
 
+                return returnImage;
+            }
+        }
+
+        public virtual void SavePicture(System.Drawing.Image image)
+        {
+            var ms = new MemoryStream();
+            image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            Picture = ms.ToArray();
+        }
+        public override Page Show()
+        {
+            throw new NotImplementedException();
+        }
+        public override Page ShowInRedactMode()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class QuestionAsPictureAndText : QuestionAsPicture
+    {
+        public string Text { get; set; } = "";
+        public override Page Show()
+        {
+            throw new NotImplementedException();
+        }
         public override Page ShowInRedactMode()
         {
             throw new NotImplementedException();
