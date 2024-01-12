@@ -14,5 +14,13 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int MaxMark { get; private set; }
         public Test Test { get; private set; }
         public Student MarkOfStudent { get; private set; }
+
+        public Mark(int currentMark, int maxMark, Test test, Student markOfStudent)
+        {
+            CurrentMark = currentMark;
+            MaxMark = maxMark;
+            Test = test;
+            MarkOfStudent = markOfStudent;
+        }
     }
 }
