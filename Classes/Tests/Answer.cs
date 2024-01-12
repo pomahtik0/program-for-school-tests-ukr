@@ -33,7 +33,23 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class PictureAnswer : Answer
     {
-        public byte[] Picture { get; set; }
+        public byte[] Picture { get; private set; } // mb set for entity
+        protected virtual System.Drawing.Image GetImageFromArray()
+        {
+            using (var ms = new MemoryStream(Picture))
+            {
+                var returnImage = System.Drawing.Image.FromStream(ms);
+
+                return returnImage;
+            }
+        }
+
+        public virtual void SavePicture(System.Drawing.Image image)
+        {
+            var ms = new MemoryStream();
+            image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            Picture = ms.ToArray();
+        }
         public override UserControl Show()
         {
             throw new NotImplementedException();
