@@ -21,9 +21,9 @@ namespace program_for_school_tests_ukr.Classes.Tests
     }
     public class Test
     {
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public string Name { get; set; }
-        public Teacher Owner { get; set; }
+        public Teacher Owner { get; private set; }
         public DateOnly DateOfLastRedaction { get; set; }
         public string Description { get; set; }
         public Subject TestSubject { get; set; }
