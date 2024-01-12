@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
-    public class Answer
+    public abstract class Answer
     {
         public int Id { get; set; }
-        public string AnswerText {  get; set; }
-        public Question AnswerToQuestion { get; set; }
-        public bool IsRealAnswer { get; set; }
+        public abstract UserControl Show();
+        public abstract UserControl ShowInRedactMode();
     }
 }
