@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
 using System.Windows.Controls;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
@@ -18,6 +16,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class TextAnswer : Answer
     {
+        [Unicode(true)]
+        [MaxLength(256)]
         public string Text { get; set; }
 
         public TextAnswer(string text)
@@ -69,6 +69,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class OpenAnswer : Answer
     {
+        [Unicode]
+        [MaxLength(100)]
         public string? Text { get; set; }
 
         public override UserControl Show()
