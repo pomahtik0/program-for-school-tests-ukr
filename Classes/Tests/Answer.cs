@@ -41,7 +41,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public byte[]? Picture { get; protected set; }
         protected virtual System.Drawing.Image GetImageFromArray()
         {
-            if(Picture == null) throw new ArgumentNullException(nameof(Picture));
+            if (Picture == null) throw new ArgumentNullException(nameof(Picture));
             using (var ms = new MemoryStream(Picture))
             {
                 var returnImage = System.Drawing.Image.FromStream(ms);
@@ -68,7 +68,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
     }
 
     public class OpenAnswer : Answer
-    { 
+    {
         public string? Text { get; set; }
 
         public override UserControl Show()
