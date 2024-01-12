@@ -11,7 +11,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
 {
     public abstract class Answer
     {
-        public int Id { get; set; }
+        public int Id { get; private set; }
         public abstract UserControl Show();
         public abstract UserControl ShowInRedactMode();
     }
@@ -19,6 +19,11 @@ namespace program_for_school_tests_ukr.Classes.Tests
     public class TextAnswer : Answer
     {
         public string Text { get; set; }
+
+        public TextAnswer(string text)
+        {
+            Text = text;
+        }
 
         public override UserControl Show()
         {
@@ -33,9 +38,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class PictureAnswer : Answer
     {
-        public byte[] Picture { get; private set; } // mb set for entity
+        public byte[]? Picture { get; protected set; }
         protected virtual System.Drawing.Image GetImageFromArray()
         {
+            if(Picture == null) throw new ArgumentNullException(nameof(Picture));
             using (var ms = new MemoryStream(Picture))
             {
                 var returnImage = System.Drawing.Image.FromStream(ms);
