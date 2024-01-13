@@ -21,14 +21,15 @@ namespace program_for_school_tests_ukr.Windows
     /// </summary>
     public partial class TeacherWindow : Window
     {
-        public TeacherWindow()
+        protected Teacher currentTeacher;
+        public TeacherWindow(Teacher currentTeacher)
         {
             InitializeComponent();
+            this.currentTeacher = currentTeacher;
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-            User.CurrentUser = null;
             BaseWindow baseWindow = new BaseWindow();
             baseWindow.Show();
             this.Close();
