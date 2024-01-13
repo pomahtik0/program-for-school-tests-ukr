@@ -14,13 +14,15 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int MaxMark { get; private set; }
         public TestInfo Test { get; private set; }
         public Student MarkOfStudent { get; private set; }
+        public DateTime TestFinishedTime {  get; set; }
 
-        public Mark(int currentMark, int maxMark, Test test, Student markOfStudent)
+        public Mark(int currentMark, int maxMark, TestInfo test, Student markOfStudent, DateTime testFinishedTime)
         {
             CurrentMark = currentMark;
             MaxMark = maxMark;
             Test = test;
             MarkOfStudent = markOfStudent;
+            TestFinishedTime = testFinishedTime;
         }
     }
 }
