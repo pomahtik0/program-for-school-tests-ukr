@@ -11,6 +11,11 @@ using System.Windows.Controls;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
+    public interface IQuestionPage
+    {
+        public Page Page { get; set; }
+        public abstract Answer? GetCurrentAnswer();
+    }
     public abstract class Question
     {
         public int Id { get; private set; }
@@ -20,7 +25,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public List<Answer> Answers { get; } = [];
         public Answer? ActualAnswer { get; set; }
         [NotMapped] 
-        public Page? QuestionPage { get; private set; }
+        public IQuestionPage? QuestionPage { get; private set; }
         public abstract Page Show();
         public abstract Page ShowInRedactMode();
     }
