@@ -1,5 +1,6 @@
 ﻿using program_for_school_tests_ukr.Classes.Users;
 using program_for_school_tests_ukr.Windows.CreatingTests;
+using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,9 +38,9 @@ namespace program_for_school_tests_ukr.Windows
 
         private void YourTests_Button_Click(object sender, RoutedEventArgs e)
         {
-            ViewTest viewTest = new ViewTest();
-            viewTest.Owner = this;
-            viewTest.Show();
+            AllMyTests allMyTests = new AllMyTests(currentTeacher);
+            allMyTests.Owner = this;
+            allMyTests.Show();
             this.Hide();
         }
 
