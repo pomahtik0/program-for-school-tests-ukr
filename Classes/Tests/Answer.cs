@@ -42,9 +42,9 @@ namespace program_for_school_tests_ukr.Classes.Tests
     public class PictureAnswer : Answer
     {
         public byte[]? Picture { get; protected set; }
-        protected virtual System.Drawing.Image GetImageFromArray()
+        protected virtual System.Drawing.Image? GetImageFromArray()
         {
-            if (Picture == null) throw new ArgumentNullException(nameof(Picture));
+            if (Picture == null) return null;
             using (var ms = new MemoryStream(Picture))
             {
                 var returnImage = System.Drawing.Image.FromStream(ms);
