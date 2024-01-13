@@ -31,7 +31,7 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Window_Initialized(object sender, EventArgs e)
         {
-
+            DataContext = currentTeacher;
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
