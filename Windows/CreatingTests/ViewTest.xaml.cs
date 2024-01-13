@@ -23,58 +23,58 @@ namespace program_for_school_tests_ukr.Windows.CreatingTests
     /// </summary>
     public partial class ViewTest : Window
     {
-        List<Test> Tests;
-        public ViewTest()
-        {
-            InitializeComponent();
-        }
+        //List<Test> Tests;
+        //public ViewTest()
+        //{
+        //    InitializeComponent();
+        //}
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            Owner.Show();
-        }
+        //private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        //{
+        //    Owner.Show();
+        //}
 
-        private void CreateTest_Button_Click(object sender, RoutedEventArgs e)
-        {
-            ViewQuestions viewQuestions = new ViewQuestions(0); // create empty test
-            viewQuestions.Owner = this;
-            viewQuestions.ShowDialog();
-        }
+        //private void CreateTest_Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    ViewQuestions viewQuestions = new ViewQuestions(0); // create empty test
+        //    viewQuestions.Owner = this;
+        //    viewQuestions.ShowDialog();
+        //}
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            using (var dbcontext = new ApplicationContext()) {
-                Tests = dbcontext.Tests.Where(x=>x.Owner == User.CurrentUser).ToList();
-            }
-            DataContext = Tests;
-        }
+        //private void Window_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    using (var dbcontext = new ApplicationContext()) {
+        //        Tests = dbcontext.Tests.Where(x=>x.Owner == User.CurrentUser).ToList();
+        //    }
+        //    DataContext = Tests;
+        //}
 
-        private void DeleteTest_Button_Click(object sender, RoutedEventArgs e)
-        {
-            using (var dbcontext = new ApplicationContext())
-            {
-                try
-                {
-                    Test testToDelete = listOfTests.SelectedItem as Test;
-                    dbcontext.Tests.Remove(testToDelete);
-                    dbcontext.SaveChanges();
-                    Tests.Remove(testToDelete);
-                }
-                catch
-                {
-                    Debug.WriteLine("error when deleting test");
-                }
-            }
-        }
+        //private void DeleteTest_Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    using (var dbcontext = new ApplicationContext())
+        //    {
+        //        try
+        //        {
+        //            Test testToDelete = listOfTests.SelectedItem as Test;
+        //            dbcontext.Tests.Remove(testToDelete);
+        //            dbcontext.SaveChanges();
+        //            Tests.Remove(testToDelete);
+        //        }
+        //        catch
+        //        {
+        //            Debug.WriteLine("error when deleting test");
+        //        }
+        //    }
+        //}
 
-        private void UpdateTest_Button_Click(object sender, RoutedEventArgs e)
-        {
+        //private void UpdateTest_Button_Click(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
 
-        private void UpdateDataContext()
-        { 
+        //private void UpdateDataContext()
+        //{ 
         
-        }
+        //}
     }
 }

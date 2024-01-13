@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.CreatingTests"
         xmlns:test="clr-namespace:program_for_school_tests_ukr.Classes.Tests"
-        xmlns:converters="clr-namespace:program_for_school_tests_ukr.Classes.ValueConverters"
         mc:Ignorable="d"
-        Title="ViewQuestions" Name="window" Height="450" Width="800" Closing="Window_Closing">
+        Title="ViewQuestions" Name="window" Height="450" Width="800">
+    <!--
     <Window.Resources>
         <converters:ButtonEnabled x:Key="buttonEnabled"/>
         <ObjectDataProvider x:Key="EnumDataSource"
@@ -77,4 +77,5 @@
             <Button Click="CancelButton_Click">Відмінити</Button>
         </StackPanel>
     </Grid>
+    -->
 </Window>
