@@ -46,15 +46,22 @@ namespace program_for_school_tests_ukr.Classes.Tests
         {
             ITestWindow? testWindow;
             public int TimeForTest { get; set; }
-            public List<Question> Questions { get; }
+            public List<Question> Questions { get; } = null!;
             public abstract ITestWindow ShowToPass();
 
         }
+
+        public TestToPass GetTestToPass { get; protected set; }
+        public abstract ITestWindow ShowToRedact();
     }
 
     public class SimpleTest(Teacher owner) : TestInfo(owner) 
     {
         public bool IsRandomOrdered { get; set; }
-        
+
+        public override ITestWindow ShowToRedact()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
