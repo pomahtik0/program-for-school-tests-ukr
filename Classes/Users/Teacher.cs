@@ -9,6 +9,6 @@ namespace program_for_school_tests_ukr.Classes.Users
 {
     public class Teacher : User
     {
-        public List<Test> OwnedTests { get; } = new List<Test>();
+        public List<TestInfo> OwnedTests { get; } = new List<TestInfo>(); // TODO: Lazy load?!
     }
 }
