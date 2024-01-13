@@ -42,5 +42,10 @@ namespace program_for_school_tests_ukr.Windows
             viewTest.Show();
             this.Hide();
         }
+
+        private void ShowAllMarks_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
