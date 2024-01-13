@@ -17,7 +17,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [Unicode]
         [MaxLength(50)]
         public string Name { get; set; } = "";
-        public List<Answer> Answers { get; } = new List<Answer>();
+        public List<Answer> Answers { get; } = [];
         public Answer? ActualAnswer { get; set; }
         [NotMapped] 
         public Page? QuestionPage { get; private set; }
