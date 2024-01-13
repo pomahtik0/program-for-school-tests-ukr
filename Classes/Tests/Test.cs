@@ -46,7 +46,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         {
             ITestWindow? testWindow;
             public int TimeForTest { get; set; }
-            public List<Question> Questions { get; } = null!;
+            public List<Question> Questions { get; protected set; } = null!; // must set in divired class
             public abstract ITestWindow ShowToPass();
 
         }
@@ -55,10 +55,25 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public abstract ITestWindow ShowToRedact();
     }
 
-    public class SimpleTest(Teacher owner) : TestInfo(owner) 
+    public class SimpleTest : TestInfo
     {
         public bool IsRandomOrdered { get; set; }
 
+        public class SimpleTestToPass : TestToPass
+        {
+            public SimpleTestToPass(TestInfo mainTest) 
+            {
+                Questions = mainTest.Questions;
+            }
+            public override ITestWindow ShowToPass()
+            {
+                throw new NotImplementedException();
+            }
+        }
+        public SimpleTest(Teacher teacher) : base(teacher) 
+        {
+            GetTestToPass = new SimpleTestToPass(this);
+        }
         public override ITestWindow ShowToRedact()
         {
             throw new NotImplementedException();
