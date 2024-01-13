@@ -1,5 +1,5 @@
-﻿using program_for_school_tests_ukr.Classes;
-using program_for_school_tests_ukr.Classes.Tests;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using program_for_school_tests_ukr.Classes.Users;
 using program_for_school_tests_ukr.Database;
 using System;
 using System.Collections.Generic;
