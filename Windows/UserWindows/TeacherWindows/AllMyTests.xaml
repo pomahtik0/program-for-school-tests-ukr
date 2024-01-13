@@ -25,11 +25,15 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button>Додати</Button>
             <Button>Редагувати</Button>
             <Button>Видалити</Button>
             <Button>Копіювати</Button>
         </StackPanel>
+
+        <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Margin="10,5">Назад</Button>
+        
     </Grid>
 </Window>
