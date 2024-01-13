@@ -21,13 +21,6 @@ namespace program_for_school_tests_ukr.Classes.Tests
         Інше
     }
 
-    public interface ITestWindow
-    {
-        public Window TestWindow { get; set; }
-        public int GetMark();
-        public void FinishTest(); // mb not
-    }
-
     public abstract class TestInfo (Teacher owner)
     {
         public int Id { get; private set; }
@@ -44,18 +37,20 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
         public abstract class TestToPass
         {
-            ITestWindow? testWindow;
+            Window? testWindow;
             public int TimeForTest { get; set; }
             public List<Question> Questions { get; protected set; } = null!; // must set in divired class
-            public abstract ITestWindow ShowToPass();
+            public abstract Window ShowToPass();
 
         }
 
-        public TestToPass GetTestToPass { get; protected set; }
-        public abstract ITestWindow ShowToRedact();
+        protected TestToPass? testToPass;
+        protected Window? redactWindow;
+        public abstract Window ShowToRedact();
+        public abstract Window ShowToPass();
     }
 
-    public class SimpleTest : TestInfo
+    public class SimpleTest(Teacher teacher) : TestInfo(teacher)
     {
         public bool IsRandomOrdered { get; set; }
 
@@ -65,16 +60,17 @@ namespace program_for_school_tests_ukr.Classes.Tests
             {
                 Questions = mainTest.Questions;
             }
-            public override ITestWindow ShowToPass()
+            public override Window ShowToPass()
             {
                 throw new NotImplementedException();
             }
         }
-        public SimpleTest(Teacher teacher) : base(teacher) 
+        public override Window ShowToRedact()
         {
-            GetTestToPass = new SimpleTestToPass(this);
+            throw new NotImplementedException();
         }
-        public override ITestWindow ShowToRedact()
+
+        public override Window ShowToPass()
         {
             throw new NotImplementedException();
         }
