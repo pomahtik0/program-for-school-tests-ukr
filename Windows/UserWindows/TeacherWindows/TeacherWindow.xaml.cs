@@ -29,6 +29,11 @@ namespace program_for_school_tests_ukr.Windows
             this.currentTeacher = currentTeacher;
         }
 
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             BaseWindow baseWindow = new BaseWindow();

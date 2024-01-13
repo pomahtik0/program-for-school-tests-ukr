@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows"
         xmlns:users="clr-namespace:program_for_school_tests_ukr.Classes.Users"
         mc:Ignorable="d"
-        Title="TeacherWindow" Height="450" Width="800">
+        Title="TeacherWindow" Height="450" Width="800" Initialized="Window_Initialized">
     <Grid>
         <DockPanel>
             <StackPanel>
