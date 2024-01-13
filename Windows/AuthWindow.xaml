@@ -11,7 +11,7 @@
             <Label Target="{Binding ElementName=login}" Content="Логін:"/>
             <TextBox Name="login"/>
             <Label Target="{Binding ElementName=password}" Content="Пароль:"/> 
-            <TextBox Name="password"/>
+            <PasswordBox Name="password"/>
             <Button Margin="10" Content="Ok" Click="Ok_Button_Click"/>
         </StackPanel>
     </Grid>
