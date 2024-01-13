@@ -12,7 +12,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int Id {  get; private set; }
         public int CurrentMark { get; private set; }
         public int MaxMark { get; private set; }
-        public Test Test { get; private set; }
+        public TestInfo Test { get; private set; }
         public Student MarkOfStudent { get; private set; }
 
         public Mark(int currentMark, int maxMark, Test test, Student markOfStudent)
