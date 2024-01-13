@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using program_for_school_tests_ukr.Classes.Users;
+using System.Windows;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
@@ -20,7 +21,14 @@ namespace program_for_school_tests_ukr.Classes.Tests
         Інше
     }
 
-    public abstract class Test (Teacher owner)
+    public interface ITestWindow
+    {
+        public Window TestWindow { get; set; }
+        public int GetMark();
+        public void FinishTest(); // mb not
+    }
+
+    public abstract class TestInfo (Teacher owner)
     {
         public int Id { get; private set; }
         public string Name { get; set; } = string.Empty;
@@ -33,9 +41,14 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int TimeForTest { get; set; }
         public List<Mark> Marks { get; } = new List<Mark>();
         public List<Question> Questions { get; } = new List<Question>();
+
+        public abstract class TestToPass
+        {
+            
+        }
     }
 
-    public class SimpleTest(Teacher owner) : Test(owner) 
+    public class SimpleTest(Teacher owner) : TestInfo(owner) 
     {
         public bool IsRandomOrdered { get; set; }
         
