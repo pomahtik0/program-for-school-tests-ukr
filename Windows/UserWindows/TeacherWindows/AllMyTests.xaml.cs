@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,11 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
     /// </summary>
     public partial class AllMyTests : Window
     {
-        public AllMyTests()
+        protected Teacher currentTeacher;
+        public AllMyTests(Teacher teacher)
         {
             InitializeComponent();
+            this.currentTeacher = teacher;
         }
     }
 }
