@@ -37,7 +37,9 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [MaxLength(256)]
         public string Description { get; set; } = string.Empty;
         public Subject TestSubject { get; set; }
+        public ushort Grade {  get; set; } // Клас для якого призначений 
         public bool IsTrainingTest { get; set; }
+        public bool IsAvailbleForTesting { get; set; }
         public ushort MaxMark { get; set; }
         public int TimeForTest { get; set; }
         public List<Mark> Marks { get; } = new List<Mark>();
