@@ -21,7 +21,7 @@ namespace program_for_school_tests_ukr.Classes.Users
         public string Username { get; set; } = string.Empty;
         [Unicode]
         [MaxLength(120)]
-        public string Name { get; set; } = string.Empty;
+        public string FullName { get; set; } = string.Empty;
         [Unicode(false)]
         [MaxLength(20)]
         public string Password { get; set; } = string.Empty;
