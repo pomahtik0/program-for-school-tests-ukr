@@ -10,8 +10,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
 {
     public interface IAnswerControl
     {
-        UserControl UserControl { get; set; }
-        bool IsChecked { get; set; }
+        public UserControl UserControl { get; protected set; }
+        public bool IsChecked { get; set; }
     }
 
     public abstract class Answer

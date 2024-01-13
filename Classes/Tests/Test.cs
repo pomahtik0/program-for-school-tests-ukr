@@ -30,7 +30,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [Unicode]
         [MaxLength(50)]
         public string Name { get; set; } = string.Empty;
-        public Teacher Owner { get; private set; } = owner;
+        public virtual Teacher Owner { get; private set; } = owner;
         public DateOnly DateOfLastRedaction { get; set; }
 
         [Unicode]
@@ -42,8 +42,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public bool IsAvailbleForTesting { get; set; }
         public ushort MaxMark { get; set; }
         public int TimeForTest { get; set; }
-        public List<Mark> Marks { get; } = new List<Mark>();
-        public List<Question> Questions { get; } = new List<Question>();
+        public virtual List<Mark> Marks { get; } = new List<Mark>();
+        public virtual List<Question> Questions { get; } = new List<Question>();
 
         public abstract class TestToPass
         {
