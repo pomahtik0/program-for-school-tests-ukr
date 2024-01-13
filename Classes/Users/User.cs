@@ -15,7 +15,7 @@ namespace program_for_school_tests_ukr.Classes.Users
 {
     public abstract class User
     {
-        public int Id { get; set; }
+        [Key]
         [Unicode(false)]
         [MaxLength(20)]
         public string Username { get; set; } = string.Empty;
