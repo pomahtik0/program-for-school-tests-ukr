@@ -16,6 +16,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public Page Page { get; set; }
         public abstract Answer? GetCurrentAnswer();
     }
+
     public abstract class Question
     {
         public int Id { get; private set; }
@@ -24,7 +25,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public string Name { get; set; } = "";
         public List<Answer> Answers { get; } = [];
         public Answer? ActualAnswer { get; set; }
-        [NotMapped] 
+        [NotMapped]
         public IQuestionPage? QuestionPage { get; private set; }
         public abstract Page Show();
         public abstract Page ShowInRedactMode();
@@ -45,6 +46,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
             throw new NotImplementedException();
         }
     }
+
     public class QuestionAsPicture : Question
     {
         public byte[]? Picture { get; protected set; }
