@@ -27,9 +27,6 @@ namespace program_for_school_tests_ukr.Classes.Users
         public string Password { get; set; } = string.Empty;
         [NotMapped]
         protected Window? currentWindow;
-        public virtual Window GetWindow()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract Window GetWindow();
     }
 }
