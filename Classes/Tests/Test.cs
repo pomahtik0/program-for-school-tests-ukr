@@ -44,7 +44,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
         }
 
+        [NotMapped]
         protected TestToPass? testToPass;
+
+        [NotMapped]
         protected Window? redactWindow;
         public abstract Window ShowToRedact();
         public abstract Window ShowToPass();
