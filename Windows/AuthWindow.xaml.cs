@@ -41,7 +41,7 @@ namespace program_for_school_tests_ukr.Windows
                 }
                 else
                 {
-                    MessageBox.Show("неправильний логін, або пароль... потім перероблю");
+                    MessageBox.Show("неправильний логін, або пароль...");
                 }
             }
         }
