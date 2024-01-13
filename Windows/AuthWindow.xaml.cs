@@ -32,10 +32,9 @@ namespace program_for_school_tests_ukr.Windows
             using (var userContext = new ApplicationContext())
             {
                 var user = userContext.Users.Where(x => x.Username == login.Text).FirstOrDefault();
-                if (user?.Password == password.Text)
+                if (user?.Password == password.Password)
                 {
-                    User.CurrentUser = user;
-                    MessageBox.Show(user.ToString());
+                    user.GetWindow().Show();
                     DialogResult = true;
                     this.Close();
                 }
