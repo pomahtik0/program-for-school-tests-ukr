@@ -44,7 +44,11 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
         public abstract class TestToPass
         {
-            
+            ITestWindow? testWindow;
+            public int TimeForTest { get; set; }
+            public List<Question> Questions { get; }
+            public abstract ITestWindow ShowToPass();
+
         }
     }
 
