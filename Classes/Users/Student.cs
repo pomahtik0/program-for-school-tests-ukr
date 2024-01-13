@@ -10,7 +10,5 @@ namespace program_for_school_tests_ukr.Classes.Users
     public class Student : User
     {
         public List<Mark> Marks { get; } = new List<Mark>();
-
-        //класс
     }
 }
