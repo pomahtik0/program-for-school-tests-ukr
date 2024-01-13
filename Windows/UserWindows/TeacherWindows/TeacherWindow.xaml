@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="TeacherWindow" Height="450" Width="800">
     <Window.Resources>
-        <users:Teacher x:Key="currentTeacher"/>
+        <users:Teacher x:Key="currentTeacher" FullName="Some long sample name"/>
     </Window.Resources>
     <Grid>
         <DockPanel>
@@ -19,8 +19,8 @@
             <Button VerticalAlignment="Top" HorizontalAlignment="Right" Click="ExitButton_Click">Вийти</Button>
         </DockPanel>
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
-            <Label>Ласкаво просимо </Label>
-            <Label Content="{Binding Path=Name, Source={StaticResource currentTeacher}}"/>
+            <Label Padding="0,2" Content="Ласкаво просимо "/>
+            <Label Padding="0, 2, 5, 0" Content="{Binding Path=FullName, Source={StaticResource currentTeacher}}"/>
         </StackPanel>
     </Grid>
 </Window>
