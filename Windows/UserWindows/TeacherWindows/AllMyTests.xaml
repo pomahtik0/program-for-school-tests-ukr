@@ -33,6 +33,18 @@
             <Button>Копіювати</Button>
         </StackPanel>
 
+        <Expander Header="Фільтри" Grid.Column="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox></ComboBox>
+                    <ComboBox></ComboBox>
+                </StackPanel>
+                <RadioButton IsChecked="True">Показувати всі</RadioButton>
+                <RadioButton>Не показувати не готові</RadioButton>
+                <RadioButton>Показувати лише не готові</RadioButton>
+            </StackPanel>
+        </Expander>
+
         <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Margin="10,5">Назад</Button>
         
     </Grid>
