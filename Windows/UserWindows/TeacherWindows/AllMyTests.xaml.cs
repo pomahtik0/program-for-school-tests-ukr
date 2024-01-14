@@ -24,7 +24,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
     public partial class AllMyTests : Window
     {
         protected Teacher currentTeacher;
-        ObservableCollection<TestInfo> tests;
+        protected ObservableCollection<TestInfo> tests;
         public AllMyTests(Teacher teacher)
         {
             InitializeComponent();
