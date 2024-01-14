@@ -11,9 +11,9 @@
             <TabItem Header="Основна інформація">
                 <StackPanel HorizontalAlignment="Left">
                     <Label>Назва</Label>
-                    <TextBox x:Name="testName" Width="100"></TextBox>
+                    <TextBox x:Name="testName" Width="100"/>
                     <Label>Опис</Label>
-                    <TextBox x:Name="testDescription" Width="100"></TextBox>
+                    <TextBox x:Name="testDescription" Width="100"/>
                 </StackPanel>    
             </TabItem>
             
