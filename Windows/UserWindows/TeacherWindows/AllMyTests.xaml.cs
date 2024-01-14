@@ -31,5 +31,9 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
         {
             listOfTests.DataContext = currentTeacher.OwnedTests;
         }
+        private void OnFilterChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
