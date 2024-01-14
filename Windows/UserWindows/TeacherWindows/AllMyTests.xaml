@@ -46,7 +46,7 @@
                     <RadioButton>Показувати лише не готові</RadioButton>
                 </StackPanel>
             </Expander>
-            <TextBox></TextBox>
+            <Label Content="{Binding SelectedItem.Description, ElementName=listOfTests}"/>
         </StackPanel>
 
         <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Margin="10,5">Назад</Button>
