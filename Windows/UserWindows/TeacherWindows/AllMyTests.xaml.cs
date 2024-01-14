@@ -2,6 +2,7 @@
 using program_for_school_tests_ukr.Classes.Users;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,8 +41,8 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             //логіка створення тестів
-            TestInfo testInfo = new SimpleTest(currentTeacher);
-            var redactTestWindow = testInfo.ShowToRedact();
+            TestInfo newTestInfo = new SimpleTest(currentTeacher);
+            var redactTestWindow = newTestInfo.ShowToRedact();
             this.Hide();
             redactTestWindow.ShowDialog();
             this.Show();
@@ -49,7 +50,15 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
 
         private void RedactButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var selectedTest = listOfTests.SelectedItem as TestInfo;
+            if(selectedTest == null)
+            {
+                throw new ArgumentNullException(nameof(selectedTest), "Помилка при обробці обраного тесту, переконайтесь що тест існує");
+            }
+            var redactTestWindow = selectedTest.ShowToRedact();
+            this.Hide();
+            redactTestWindow.ShowDialog();
+            this.Show();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
