@@ -35,5 +35,25 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
         {
 
         }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RedactButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CopyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

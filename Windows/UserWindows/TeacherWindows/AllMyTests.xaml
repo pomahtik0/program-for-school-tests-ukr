@@ -28,10 +28,10 @@
         </ListView>
         
         <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
-            <Button>Додати</Button>
-            <Button>Редагувати</Button>
-            <Button>Видалити</Button>
-            <Button>Копіювати</Button>
+            <Button Click="AddButton_Click">Додати</Button>
+            <Button Click="RedactButton_Click">Редагувати</Button>
+            <Button Click="DeleteButton_Click">Видалити</Button>
+            <Button Click="CopyButton_Click">Копіювати</Button>
         </StackPanel>
 
         <StackPanel Grid.Column="1">
