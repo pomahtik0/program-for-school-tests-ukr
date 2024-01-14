@@ -16,7 +16,7 @@
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
         
-        <ListView x:Name="listOfTests">
+        <ListView x:Name="listOfTests" ItemsSource="{Binding}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Назва"/>
