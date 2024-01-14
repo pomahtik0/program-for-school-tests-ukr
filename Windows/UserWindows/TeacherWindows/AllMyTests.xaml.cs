@@ -2,6 +2,7 @@
 using program_for_school_tests_ukr.Classes.Users;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
 
         private void OnWindowLoad(object sender, RoutedEventArgs e)
         {
-            listOfTests.DataContext = currentTeacher.OwnedTests;
+            listOfTests.DataContext = new ObservableCollection<TestInfo>(currentTeacher.OwnedTests);
         }
         private void OnFilterChanged(object sender, RoutedEventArgs e)
         {
