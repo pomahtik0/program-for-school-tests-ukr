@@ -1,4 +1,5 @@
-﻿using program_for_school_tests_ukr.Classes.Users;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using program_for_school_tests_ukr.Classes.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +39,12 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //логіка створення тестів
+            TestInfo testInfo = new SimpleTest(currentTeacher);
+            var redactTestWindow = testInfo.ShowToRedact();
+            this.Hide();
+            redactTestWindow.ShowDialog();
+            this.Show();
         }
 
         private void RedactButton_Click(object sender, RoutedEventArgs e)
