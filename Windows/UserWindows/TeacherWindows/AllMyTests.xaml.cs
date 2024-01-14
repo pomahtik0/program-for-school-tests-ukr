@@ -24,15 +24,17 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
     public partial class AllMyTests : Window
     {
         protected Teacher currentTeacher;
+        ObservableCollection<TestInfo> tests;
         public AllMyTests(Teacher teacher)
         {
             InitializeComponent();
             this.currentTeacher = teacher;
+            tests = new ObservableCollection<TestInfo>(currentTeacher.OwnedTests);
         }
 
         private void OnWindowLoad(object sender, RoutedEventArgs e)
         {
-            listOfTests.DataContext = new ObservableCollection<TestInfo>(currentTeacher.OwnedTests);
+            listOfTests.DataContext = tests;
         }
         private void OnFilterChanged(object sender, RoutedEventArgs e)
         {
