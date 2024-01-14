@@ -64,12 +64,22 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private TestInfo GetSelectedTest()
+        {
+            var selectedTest = listOfTests.SelectedItem as TestInfo;
+            if (selectedTest == null)
+            {
+                throw new ArgumentNullException(nameof(selectedTest), "Помилка при обробці обраного тесту, переконайтесь що тест існує");
+            }
+            return selectedTest;
         }
     }
 }
