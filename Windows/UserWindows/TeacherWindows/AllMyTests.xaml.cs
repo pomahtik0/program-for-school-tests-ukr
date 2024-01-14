@@ -75,6 +75,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
                 catch
                 {
                     Debug.WriteLine("error when deleting test from db");
+                    return;
                 }
             }
             tests.Remove(selectedTest);
