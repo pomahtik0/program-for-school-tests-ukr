@@ -77,7 +77,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
                     Debug.WriteLine("error when deleting test from db");
                 }
             }
-            
+            tests.Remove(selectedTest);
         }
 
         private void CopyButton_Click(object sender, RoutedEventArgs e)
