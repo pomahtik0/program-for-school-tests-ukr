@@ -14,6 +14,17 @@
                     <TextBox x:Name="testName" Width="100"/>
                     <Label>Опис</Label>
                     <TextBox x:Name="testDescription" Width="100"/>
+                    <Label>Предмет</Label>
+                    <ComboBox/>
+                    <Label>Клас</Label>
+                    <ComboBox></ComboBox>
+                    <CheckBox>Тренувальний</CheckBox>
+                    <CheckBox>Доступний</CheckBox>
+                    <Label>Час на тест(хв.)</Label>
+                    <TextBox Width="100"></TextBox>
+                    <Label>Максимальна оцінка</Label>
+                    <TextBox Width="100"/>
+                    <CheckBox>Випадковий порядок тестів</CheckBox>
                 </StackPanel>    
             </TabItem>
             
