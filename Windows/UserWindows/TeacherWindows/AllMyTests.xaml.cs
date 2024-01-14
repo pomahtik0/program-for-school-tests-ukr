@@ -51,11 +51,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
 
         private void RedactButton_Click(object sender, RoutedEventArgs e)
         {
-            var selectedTest = listOfTests.SelectedItem as TestInfo;
-            if(selectedTest == null)
-            {
-                throw new ArgumentNullException(nameof(selectedTest), "Помилка при обробці обраного тесту, переконайтесь що тест існує");
-            }
+            var selectedTest = GetSelectedTest();
             var redactTestWindow = selectedTest.ShowToRedact();
             this.Hide();
             redactTestWindow.ShowDialog();
