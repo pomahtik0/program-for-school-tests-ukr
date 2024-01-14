@@ -9,8 +9,14 @@
     <Grid>
         <TabControl>
             <TabItem Header="Основна інформація">
-                
+                <StackPanel HorizontalAlignment="Left">
+                    <Label>Назва</Label>
+                    <TextBox x:Name="testName" Width="100"></TextBox>
+                    <Label>Опис</Label>
+                    <TextBox x:Name="testDescription" Width="100"></TextBox>
+                </StackPanel>    
             </TabItem>
+            
             <TabItem Header="Питання">
                 
             </TabItem>
