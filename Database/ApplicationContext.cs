@@ -15,9 +15,11 @@ namespace program_for_school_tests_ukr.Database
         public DbSet<TestInfo> Tests { get; set; }
         public DbSet<Mark> Marks { get; set; }
         public DbSet<Question> Question { get; set; }
+
+        protected string myConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pomahtik\source\repos\program for school tests ukr\Database\Database.mdf"";Integrated Security=True;Connect Timeout=30";
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\pomahtik\source\repos\program for school tests ukr\Database\Database.mdf"";Integrated Security=True;Connect Timeout=30");
+            options.UseLazyLoadingProxies().UseSqlServer(myConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
