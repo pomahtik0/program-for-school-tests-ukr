@@ -1,8 +1,10 @@
 ﻿using program_for_school_tests_ukr.Classes.Tests;
 using program_for_school_tests_ukr.Classes.Users;
+using program_for_school_tests_ukr.Database;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -62,6 +64,19 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
+            var selectedTest = GetSelectedTest();
+            using(var dbcontext = new ApplicationContext())
+            {
+                try
+                {
+                    dbcontext.Tests.Remove(selectedTest);
+                    dbcontext.SaveChanges();
+                }
+                catch
+                {
+                    Debug.WriteLine("error when deleting test from db");
+                }
+            }
             
         }
 
