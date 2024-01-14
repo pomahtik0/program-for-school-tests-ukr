@@ -26,5 +26,9 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
             InitializeComponent();
             this.currentTeacher = teacher;
         }
+        public void OnWindowLoad(object sender, EventArgs e)
+        {
+
+        }
     }
 }
