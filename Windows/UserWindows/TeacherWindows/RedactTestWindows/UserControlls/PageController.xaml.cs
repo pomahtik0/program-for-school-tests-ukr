@@ -72,6 +72,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
                 ListOfQuestions.Add(question);
                 PageWindow.Navigate(question.QuestionPage);
             };
+            wrapper.Children.Add(addButton);
         }
 
         private Question addNewQuestion()
