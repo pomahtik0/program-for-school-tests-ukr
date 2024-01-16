@@ -24,15 +24,18 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
     /// </summary>
     public partial class PageController : UserControl
     {
-        private static readonly DependencyPropertyKey QuestionsPropertyKey =
-        DependencyProperty.RegisterReadOnly(
+        private static readonly DependencyProperty QuestionsProperty =
+        DependencyProperty.Register(
           name: "ListOfQuestions",
           propertyType: typeof(IEnumerable<Question>),
           ownerType: typeof(PageController),
           typeMetadata: new FrameworkPropertyMetadata()
         );
-        public IEnumerable<Question> ListOfQuestions =>
-            (IEnumerable<Question>)GetValue(QuestionsPropertyKey.DependencyProperty);
+        public IEnumerable<Question> ListOfQuestions
+        {
+            get => (IEnumerable<Question>) GetValue(QuestionsProperty);
+            set => SetValue(QuestionsProperty, value);
+        }
 
         public static readonly DependencyProperty PageWindowProperty = DependencyProperty.Register(
             "PageWindow", typeof(Control),
@@ -51,8 +54,8 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void PageController_Loaded(object sender, RoutedEventArgs e)
         {
-            if (QuestionsPropertyKey == null)
-                throw new ArgumentNullException(nameof(QuestionsPropertyKey));
+            if (QuestionsProperty == null)
+                throw new ArgumentNullException(nameof(QuestionsProperty));
             if (PageWindowProperty == null)
                 throw new ArgumentNullException(nameof(PageWindow));
         }
