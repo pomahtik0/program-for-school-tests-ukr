@@ -53,6 +53,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void PageController_Loaded(object sender, RoutedEventArgs e)
         {
+            wrapper.Children.Clear();
             int i = 1;
             foreach(Question question in ListOfQuestions)
             {
