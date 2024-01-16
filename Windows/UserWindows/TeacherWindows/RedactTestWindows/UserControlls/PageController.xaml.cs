@@ -47,5 +47,10 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         {
             InitializeComponent();
         }
+
+        private void PageController_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
