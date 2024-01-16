@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows"
         xmlns:uc="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.UserControlls"
         mc:Ignorable="d"
-        Title="RedactTest" Height="450" Width="800">
+        Title="RedactTest" Height="450" Width="800" Loaded="OnWindow_Loaded">
     <Grid>
         <TabControl>
             <TabItem Header="Основна інформація">
