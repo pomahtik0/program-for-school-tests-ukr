@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,7 +21,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public List<Answer> Answers { get; } = [];
         public Answer? ActualAnswer { get; set; }
         [NotMapped]
-        public Page? QuestionPage { get; private set; }
+        protected Page? QuestionPage { get; set; }
         public abstract Page Show();
         public abstract Page ShowInRedactMode();
     }
@@ -37,6 +38,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         }
         public override Page ShowInRedactMode()
         {
+            QuestionPage ??= new Page1();
+            return QuestionPage;
             throw new NotImplementedException();
         }
     }
