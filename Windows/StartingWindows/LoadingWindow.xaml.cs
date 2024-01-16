@@ -30,6 +30,10 @@ namespace program_for_school_tests_ukr.Windows
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+        
+        }
+        private void BasicRun()
+        {
             BaseWindow baseWindow = new BaseWindow();
             baseWindow.Show();
             this.Close();
