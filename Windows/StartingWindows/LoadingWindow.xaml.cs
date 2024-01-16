@@ -45,6 +45,7 @@ namespace program_for_school_tests_ukr.Windows
             testInfo.Questions.Add(new QuestionAsText());
             testInfo.Questions.Add(new QuestionAsText());
             testInfo.ShowToRedact().Show();
+            this.Close();
         }
     }
 }
