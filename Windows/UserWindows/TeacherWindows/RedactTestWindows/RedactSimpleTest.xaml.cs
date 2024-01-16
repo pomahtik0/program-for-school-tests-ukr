@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,16 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
     /// </summary>
     public partial class RedactSimpleTest : Window
     {
-        public RedactSimpleTest()
+        SimpleTest test;
+        public RedactSimpleTest(TestInfo testToRedact)
         {
             InitializeComponent();
+            test = testToRedact as SimpleTest;
         }
 
         private void OnWindow_Loaded(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }
