@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows"
+        xmlns:uc="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.UserControlls"
         mc:Ignorable="d"
         Title="RedactTest" Height="450" Width="800">
     <Grid>
@@ -29,7 +30,20 @@
             </TabItem>
             
             <TabItem Header="Питання">
-                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <Frame x:Name="pageFrame" Grid.RowSpan="2"/>
+                    <uc:PageController Grid.Column="1"/>
+                    <Button Content="Закрити" Grid.Row="1" Grid.Column="1" Width="100" Height="20"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
