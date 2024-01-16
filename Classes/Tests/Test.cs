@@ -8,6 +8,7 @@ using program_for_school_tests_ukr.Classes.Users;
 using System.Windows;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
+using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
@@ -80,7 +81,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         }
         public override Window ShowToRedact()
         {
-            throw new NotImplementedException();
+            redactWindow ??= new RedactSimpleTest(this);
+            return redactWindow;
         }
 
         public override Window ShowToPass()
