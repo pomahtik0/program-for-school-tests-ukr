@@ -53,10 +53,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void PageController_Loaded(object sender, RoutedEventArgs e)
         {
-            if (QuestionsPropertyKey == null)
-                throw new ArgumentNullException(nameof(QuestionsPropertyKey));
-            if (PageWindowProperty == null)
-                throw new ArgumentNullException(nameof(PageWindow));
+
         }
     }
 }
