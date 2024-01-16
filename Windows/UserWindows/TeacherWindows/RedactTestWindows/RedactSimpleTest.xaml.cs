@@ -17,9 +17,9 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
     /// <summary>
     /// Interaction logic for RedactTest.xaml
     /// </summary>
-    public partial class RedactTest : Window
+    public partial class RedactSimpleTest : Window
     {
-        public RedactTest()
+        public RedactSimpleTest()
         {
             InitializeComponent();
         }
