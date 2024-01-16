@@ -41,9 +41,9 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
             typeof(PageController)
             );
 
-        public Control PageWindow
+        public Frame PageWindow
         {
-            get => (Control)GetValue(PageWindowProperty);
+            get => (Frame)GetValue(PageWindowProperty);
             set => SetValue(PageWindowProperty, value);
         }
         public PageController()
@@ -53,7 +53,30 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void PageController_Loaded(object sender, RoutedEventArgs e)
         {
+            int i = 1;
+            foreach(Question question in ListOfQuestions)
+            {
+                Button button = new Button();
+                button.Content = i++.ToString();
+                button.Click += (s, e) =>
+                {
+                    PageWindow.Navigate(question.QuestionPage);
+                };
+                wrapper.Children.Add(button);
+            }
+            Button addButton = new Button();
+            addButton.Content = "+";
+            addButton.Click += (s, e) =>
+            {
+                var question = addNewQuestion();
+                ListOfQuestions.Add(question);
+                PageWindow.Navigate(question.QuestionPage);
+            };
+        }
 
+        private Question addNewQuestion()
+        {
+            throw new NotImplementedException();
         }
     }
 }
