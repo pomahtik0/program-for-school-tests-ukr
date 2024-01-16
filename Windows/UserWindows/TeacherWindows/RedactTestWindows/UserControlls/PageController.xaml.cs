@@ -28,7 +28,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
           name: "ListOfQuestions",
           propertyType: typeof(ObservableCollection<Question>),
           ownerType: typeof(PageController),
-          typeMetadata: new FrameworkPropertyMetadata()
+          typeMetadata: new FrameworkPropertyMetadata(defaultValue: new ObservableCollection<Question>())
         );
         public ObservableCollection<Question> ListOfQuestions
         {
