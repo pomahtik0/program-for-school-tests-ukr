@@ -1,5 +1,4 @@
 ﻿using program_for_school_tests_ukr.Classes.Tests;
-using program_for_school_tests_ukr.Windows.CreatingTests;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -54,8 +53,8 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void PageController_Loaded(object sender, RoutedEventArgs e)
         {
-            if (QuestionsProperty == null)
-                throw new ArgumentNullException(nameof(QuestionsProperty));
+            if (QuestionsPropertyKey == null)
+                throw new ArgumentNullException(nameof(QuestionsPropertyKey));
             if (PageWindowProperty == null)
                 throw new ArgumentNullException(nameof(PageWindow));
         }
