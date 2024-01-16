@@ -21,10 +21,10 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
     public partial class RedactSimpleTest : Window
     {
         SimpleTest test;
-        public RedactSimpleTest(TestInfo testToRedact)
+        public RedactSimpleTest(SimpleTest testToRedact)
         {
             InitializeComponent();
-            test = testToRedact as SimpleTest;
+            test = testToRedact;
         }
 
         private void OnWindow_Loaded(object sender, RoutedEventArgs e)
