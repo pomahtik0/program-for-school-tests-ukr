@@ -41,7 +41,7 @@
                     </Grid.RowDefinitions>
                     
                     <Frame x:Name="pageFrame" Grid.RowSpan="2"/>
-                    <uc:PageController Grid.Column="1"  PageWindow="{Binding ElementName=pageFrame}" ListOfQuestions="{Binding}"/>
+                    <uc:PageController x:Name="pageController" Grid.Column="1"  PageWindow="{Binding ElementName=pageFrame}" ListOfQuestions="{Binding}"/>
                     <Button Content="Закрити" Grid.Row="1" Grid.Column="1" Width="100" Height="20"/>
                 </Grid>
             </TabItem>
