@@ -26,13 +26,13 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         private static readonly DependencyProperty QuestionsProperty =
         DependencyProperty.Register(
           name: "ListOfQuestions",
-          propertyType: typeof(IEnumerable<Question>),
+          propertyType: typeof(ObservableCollection<Question>),
           ownerType: typeof(PageController),
           typeMetadata: new FrameworkPropertyMetadata()
         );
-        public IEnumerable<Question> ListOfQuestions
+        public ObservableCollection<Question> ListOfQuestions
         {
-            get => (IEnumerable<Question>) GetValue(QuestionsProperty);
+            get => (ObservableCollection<Question>) GetValue(QuestionsProperty);
             set => SetValue(QuestionsProperty, value);
         }
 
