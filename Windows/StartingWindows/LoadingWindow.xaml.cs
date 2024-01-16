@@ -1,4 +1,7 @@
 ﻿using program_for_school_tests_ukr.Classes;
+using program_for_school_tests_ukr.Classes.Tests;
+using program_for_school_tests_ukr.Classes.Users;
+using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +33,14 @@ namespace program_for_school_tests_ukr.Windows
             BaseWindow baseWindow = new BaseWindow();
             baseWindow.Show();
             this.Close();
+        }
+        private void TestMode_RedactSimpleTest()
+        {
+            User teacher = new Teacher();
+            TestInfo testInfo = new SimpleTest(teacher as Teacher);
+            testInfo.Questions.Add(new QuestionAsText());
+            testInfo.Questions.Add(new QuestionAsText());
+            testInfo.ShowToRedact().Show();
         }
     }
 }
