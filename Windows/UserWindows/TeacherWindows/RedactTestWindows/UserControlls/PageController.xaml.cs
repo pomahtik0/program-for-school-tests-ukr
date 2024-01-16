@@ -61,7 +61,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
                 button.Content = i++.ToString();
                 button.Click += (s, e) =>
                 {
-                    PageWindow.Navigate(question.QuestionPage);
+                    PageWindow.Content = question.ShowInRedactMode();
                 };
                 wrapper.Children.Add(button);
             }
@@ -71,7 +71,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
             {
                 var question = addNewQuestion();
                 ListOfQuestions.Add(question);
-                PageWindow.Navigate(question.QuestionPage);
+                PageWindow.Content = question.ShowInRedactMode();
             };
             wrapper.Children.Add(addButton);
         }
