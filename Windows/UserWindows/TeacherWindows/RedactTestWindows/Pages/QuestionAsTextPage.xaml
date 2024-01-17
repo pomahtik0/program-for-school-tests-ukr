@@ -13,9 +13,15 @@
             <RowDefinition/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <Label>Назва питання</Label>
-            <TextBox></TextBox>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Margin="10,0">
+                <Label>Назва питання</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+            <StackPanel Margin="10,0">
+                <Label>Текст питання</Label>
+                <TextBox></TextBox>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
