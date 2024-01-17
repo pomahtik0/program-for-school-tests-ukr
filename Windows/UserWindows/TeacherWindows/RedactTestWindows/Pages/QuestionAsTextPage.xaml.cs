@@ -30,7 +30,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
+            this.DataContext = question;
         }
     }
 }
