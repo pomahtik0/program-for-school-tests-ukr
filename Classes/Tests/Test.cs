@@ -58,9 +58,6 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
         [NotMapped]
         protected TestToPass? testToPass;
-
-        [NotMapped]
-        protected Window? redactWindow;
         public abstract Window ShowToRedact();
         public abstract Window ShowToPass();
     }
@@ -82,8 +79,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         }
         public override Window ShowToRedact()
         {
-            redactWindow ??= new RedactSimpleTest(this);
-            return redactWindow;
+            return new RedactSimpleTest(this);
         }
 
         public override Window ShowToPass()
