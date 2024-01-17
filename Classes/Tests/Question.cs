@@ -3,6 +3,7 @@ using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTest
 using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.Pages;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
@@ -19,7 +20,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [Unicode]
         [MaxLength(50)]
         public string Name { get; set; } = "";
-        public List<Answer> Answers { get; } = [];
+        public ObservableCollection<Answer> Answers { get; } = [];
         public Answer? ActualAnswer { get; set; }
         [NotMapped]
         protected Page? QuestionPage { get; set; }

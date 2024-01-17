@@ -9,6 +9,7 @@ using System.Windows;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows;
+using System.Collections.ObjectModel;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
@@ -44,7 +45,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public ushort MaxMark { get; set; }
         public int TimeForTest { get; set; }
         public virtual List<Mark> Marks { get; } = new List<Mark>();
-        public virtual List<Question> Questions { get; } = new List<Question>();
+        public virtual ObservableCollection<Question> Questions { get; } = [];
 
         public abstract class TestToPass
         {
