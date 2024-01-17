@@ -27,5 +27,10 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
             InitializeComponent();
             this.question = question;
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
