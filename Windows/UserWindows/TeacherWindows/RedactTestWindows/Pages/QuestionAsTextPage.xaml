@@ -16,11 +16,11 @@
         <StackPanel Orientation="Horizontal">
             <StackPanel Margin="10,0">
                 <Label>Назва питання</Label>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding Name, Mode=TwoWay}"/>
             </StackPanel>
             <StackPanel Margin="10,0">
                 <Label>Текст питання</Label>
-                <TextBox></TextBox>
+                <TextBox Text="{Binding Text, Mode=TwoWay}"/>
             </StackPanel>
         </StackPanel>
     </Grid>
