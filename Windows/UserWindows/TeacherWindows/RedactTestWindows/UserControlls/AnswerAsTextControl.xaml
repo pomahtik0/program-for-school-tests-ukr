@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.UserControlls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <RadioButton GroupName="Answers">
+    <RadioButton GroupName="Answers" IsChecked="{Binding AnswerToQuestion.ActualAnswer, Mode=TwoWay, Converter=, ConverterParameter={Binding}}">
         <WrapPanel>
             <TextBox Width="100" Text="{Binding Text, Mode=TwoWay}"/>
             <Button>Видалити</Button>
