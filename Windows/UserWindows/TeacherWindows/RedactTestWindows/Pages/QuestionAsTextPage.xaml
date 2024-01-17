@@ -23,5 +23,10 @@
                 <TextBox Text="{Binding Text, Mode=TwoWay}"/>
             </StackPanel>
         </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <StackPanel x:Name="answerPanel"/>
+            <Button Margin="15" Width="140" Content="Додати нове питання"></Button>
+        </StackPanel>
     </Grid>
 </Page>
