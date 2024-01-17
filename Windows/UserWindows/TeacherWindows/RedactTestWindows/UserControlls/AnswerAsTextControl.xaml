@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.UserControlls"
              xmlns:converters="clr-namespace:program_for_school_tests_ukr.Classes.Converters"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
     <UserControl.Resources>
         <converters:IsCheckedToActualAnswerConverter x:Key="isCheckedConverter"/>
     </UserControl.Resources>

@@ -27,5 +27,10 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
             InitializeComponent();
             this.textAnswer = textAnswer;
         }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
