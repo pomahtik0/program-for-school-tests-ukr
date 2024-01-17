@@ -8,17 +8,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace program_for_school_tests_ukr.Classes.Tests
 {
-    public interface IAnswerControl
-    {
-        public UserControl UserControl { get; protected set; }
-        public bool IsChecked { get; set; }
-    }
-
     public abstract class Answer
     {
         public int Id { get; private set; }
         [NotMapped]
-        public IAnswerControl? AnswerControl { get; private set; }
+        public UserControl? AnswerControl { get; private set; }
         public abstract UserControl Show();
         public abstract UserControl ShowInRedactMode();
     }
