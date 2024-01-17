@@ -13,6 +13,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public int Id { get; private set; }
         [NotMapped]
         public UserControl? AnswerControl { get; private set; }
+        [NotMapped]
+        public bool IsChecked { get; set; }
         public abstract UserControl Show();
         public abstract UserControl ShowInRedactMode();
     }
