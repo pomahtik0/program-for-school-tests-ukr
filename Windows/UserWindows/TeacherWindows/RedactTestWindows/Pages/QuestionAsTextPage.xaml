@@ -9,6 +9,9 @@
       Title="QuestionAsTextPage" Loaded="Page_Loaded">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
     </Grid>
 </Page>
