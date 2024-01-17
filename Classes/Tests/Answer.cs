@@ -10,10 +10,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 {
     public abstract class Answer
     {
-        public int Id { get; private set; }
+        public int Id { get; protected set; }
         [NotMapped]
-        public UserControl? AnswerControl { get; private set; }
-        public Question AnswerToQuestion { get; private set; }
+        public UserControl? AnswerControl { get; protected set; }
+        public Question AnswerToQuestion { get; protected set; }
         protected Answer(Question answerToQuestion)
         {
             AnswerToQuestion = answerToQuestion;
