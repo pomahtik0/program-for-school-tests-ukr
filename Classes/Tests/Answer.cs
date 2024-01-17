@@ -14,6 +14,11 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [NotMapped]
         public UserControl? AnswerControl { get; private set; }
         public Question AnswerToQuestion { get; private set; }
+        protected Answer(Question answerToQuestion)
+        {
+            AnswerToQuestion = answerToQuestion;
+            answerToQuestion.Answers.Add(this);
+        }
         public abstract UserControl Show();
         public abstract UserControl ShowInRedactMode();
     }
@@ -24,7 +29,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [MaxLength(256)]
         public string Text { get; set; }
 
-        public TextAnswer(string text)
+        public TextAnswer(string text, Question answerToQuesion):base(answerToQuesion)
         {
             Text = text;
         }
@@ -42,6 +47,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class PictureAnswer : Answer
     {
+        public PictureAnswer(Question answerToQuestion) : base(answerToQuestion)
+        {
+        }
+
         public byte[]? Picture { get; protected set; }
         protected virtual System.Drawing.Image? GetImageFromArray()
         {
@@ -73,6 +82,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class OpenAnswer : Answer
     {
+        public OpenAnswer(Question answerToQuestion) : base(answerToQuestion)
+        {
+        }
+
         [Unicode]
         [MaxLength(100)]
         public string? Text { get; set; }
