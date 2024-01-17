@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows;
+using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -38,9 +39,8 @@ namespace program_for_school_tests_ukr.Classes.Tests
         }
         public override Page ShowInRedactMode()
         {
-            QuestionPage ??= new Page1();
+            QuestionPage ??= new QuestionAsTextPage(this);
             return QuestionPage;
-            throw new NotImplementedException();
         }
     }
 
