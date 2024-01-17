@@ -13,5 +13,9 @@
             <RowDefinition/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
+        <StackPanel>
+            <Label>Назва питання</Label>
+            <TextBox></TextBox>
+        </StackPanel>
     </Grid>
 </Page>
