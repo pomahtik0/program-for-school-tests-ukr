@@ -6,12 +6,10 @@
              xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.UserControlls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <RadioButton>
-            <WrapPanel>
-                <TextBox Width="100"></TextBox>
-                <Button>Видалити</Button>
-            </WrapPanel>
-        </RadioButton>            
-    </Grid>
+    <RadioButton>
+        <WrapPanel>
+            <TextBox Width="100"></TextBox>
+            <Button>Видалити</Button>
+        </WrapPanel>
+    </RadioButton> 
 </UserControl>
