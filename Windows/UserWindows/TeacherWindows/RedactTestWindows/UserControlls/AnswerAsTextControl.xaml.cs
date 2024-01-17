@@ -1,4 +1,5 @@
-﻿using System;
+﻿using program_for_school_tests_ukr.Classes.Tests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
     /// </summary>
     public partial class AnswerAsTextControl : UserControl
     {
-        public AnswerAsTextControl()
+        TextAnswer textAnswer;
+        public AnswerAsTextControl(TextAnswer textAnswer)
         {
             InitializeComponent();
+            this.textAnswer = textAnswer;
         }
     }
 }
