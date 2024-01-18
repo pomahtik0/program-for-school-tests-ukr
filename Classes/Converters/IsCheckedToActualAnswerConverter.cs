@@ -14,17 +14,20 @@ namespace program_for_school_tests_ukr.Classes.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value.Equals(parameter);
+            var answer = (Answer)value;
+            return answer.Equals(answer.AnswerToQuestion.ActualAnswer);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             bool isChecked = (bool)value;
-            if(isChecked)
+            var answer = (Answer)parameter;
+
+            if (isChecked)
             {
-                return parameter;
+                return answer;
             }
-            return value;
+            return answer.AnswerToQuestion.ActualAnswer!;
         }
     }
 }
