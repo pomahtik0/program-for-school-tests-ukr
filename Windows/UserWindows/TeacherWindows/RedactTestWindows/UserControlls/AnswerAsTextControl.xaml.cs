@@ -35,7 +35,11 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-
+            var radioButton = (RadioButton)sender;
+            if(radioButton.IsChecked == true)
+            {
+                textAnswer.AnswerToQuestion.ActualAnswer = textAnswer;
+            }
         }
     }
 }
