@@ -31,6 +31,8 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             DataContext = textAnswer;
+            if (textAnswer.AnswerToQuestion.ActualAnswer?.Equals(textAnswer) == true)
+                radioButton.IsChecked = true;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
