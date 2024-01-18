@@ -40,10 +40,17 @@ namespace program_for_school_tests_ukr.Windows
         }
         private void TestMode_RedactSimpleTest()
         {
-            User teacher = new Teacher();
-            TestInfo testInfo = new SimpleTest(teacher as Teacher);
-            testInfo.Questions.Add(new QuestionAsText());
-            testInfo.Questions.Add(new QuestionAsText());
+            Teacher teacher = new Teacher();
+            TestInfo testInfo = new SimpleTest(teacher);
+            var q1 = new QuestionAsText();
+            var q2 = new QuestionAsText();
+            testInfo.Questions.Add(q1);
+            testInfo.Questions.Add(q2);
+            var a1 = new TextAnswer(q1);
+            var a2 = new TextAnswer(q1);
+            q1.ActualAnswer = a2;
+            var a3 = new TextAnswer(q2);
+            var a4 = new TextAnswer(q2);
             testInfo.ShowToRedact().Show();
             this.Close();
         }
