@@ -29,9 +29,9 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [MaxLength(256)]
         public string Text { get; set; }
 
-        public TextAnswer(string text, Question answerToQuesion):base(answerToQuesion)
+        public TextAnswer(Question answerToQuesion):base(answerToQuesion)
         {
-            Text = text;
+            Text = "";
         }
 
         public override UserControl Show()
