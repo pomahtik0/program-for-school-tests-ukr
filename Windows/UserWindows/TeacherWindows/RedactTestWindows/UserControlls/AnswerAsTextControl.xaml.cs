@@ -32,5 +32,10 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         {
             DataContext = textAnswer;
         }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
