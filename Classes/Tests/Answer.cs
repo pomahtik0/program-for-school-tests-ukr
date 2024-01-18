@@ -41,7 +41,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
         public override UserControl ShowInRedactMode()
         {
-            throw new NotImplementedException();
+            return new Windows.UserWindows.TeacherWindows.RedactTestWindows.UserControlls.AnswerAsTextControl(this);
         }
     }
 
