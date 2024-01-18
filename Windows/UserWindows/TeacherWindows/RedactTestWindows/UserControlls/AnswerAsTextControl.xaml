@@ -10,7 +10,7 @@
     <UserControl.Resources>
         <converters:IsCheckedToActualAnswerConverter x:Key="isCheckedConverter"/>
     </UserControl.Resources>
-    <RadioButton GroupName="Answers" Checked="RadioButton_Checked">
+    <RadioButton x:Name="radioButton" GroupName="Answers" Checked="RadioButton_Checked">
         <WrapPanel>
             <TextBox Width="100" Text="{Binding Text, Mode=TwoWay}"/>
             <Button>Видалити</Button>
