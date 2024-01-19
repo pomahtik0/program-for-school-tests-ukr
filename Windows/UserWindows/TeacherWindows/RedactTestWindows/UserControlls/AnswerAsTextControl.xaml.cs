@@ -43,5 +43,12 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
             if (textAnswer.AnswerToQuestion.ActualAnswer?.Equals(textAnswer) == true)
                 radioButton.IsChecked = true;
         }
+
+        private void DeleteThisAnswer_Click(object sender, RoutedEventArgs e)
+        {
+            textAnswer.AnswerToQuestion.Answers.Remove(textAnswer);
+            if (textAnswer.AnswerToQuestion.ActualAnswer == textAnswer)
+                textAnswer.AnswerToQuestion.ActualAnswer = null;
+        }
     }
 }

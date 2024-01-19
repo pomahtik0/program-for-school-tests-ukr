@@ -9,8 +9,8 @@
     <RadioButton VerticalContentAlignment="Center" x:Name="radioButton" GroupName="Answers" Checked="RadioButton_Checked">
         <WrapPanel> 
             <TextBox Margin="2, 0, 10, 0" Width="200" Height="50" Text="{Binding Text, Mode=TwoWay}"
-                     TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/> 
-            <Button VerticalAlignment="Center">Видалити</Button>
+                     TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+            <Button VerticalAlignment="Center" Click="DeleteThisAnswer_Click">Видалити</Button>
         </WrapPanel>
     </RadioButton> 
 </UserControl>
