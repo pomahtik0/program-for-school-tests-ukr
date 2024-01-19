@@ -4,15 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.UserControlls"
-             xmlns:converters="clr-namespace:program_for_school_tests_ukr.Classes.Converters"
-             xmlns:answers="clr-namespace:program_for_school_tests_ukr.Classes.Tests"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Initialized="UserControl_Initialized">
-    <UserControl.Resources>
-        <converters:IsCheckedToActualAnswerConverter x:Key="isCheckedConverter"/>
-    </UserControl.Resources>
     <RadioButton x:Name="radioButton" GroupName="Answers" Checked="RadioButton_Checked">
-        <WrapPanel>
+        <WrapPanel> 
             <TextBox Width="100" Text="{Binding Text, Mode=TwoWay}"/>
             <Button>Видалити</Button>
         </WrapPanel>
