@@ -32,8 +32,13 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             this.DataContext = question;
+            UpdateAnswerList();
+        }
+
+        private void UpdateAnswerList()
+        {
             answerPanel.Children.Clear();
-            foreach(Answer answer in question.Answers)
+            foreach (Answer answer in question.Answers)
             {
                 answerPanel.Children.Add(answer.ShowInRedactMode());
             }
@@ -41,9 +46,9 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void AddNewAnswer_Click(object sender, RoutedEventArgs e)
         {
-            CreateAnAnswer createAnAnswer = new CreateAnAnswer(question.Answers, question);
+            CreateAnAnswer createAnAnswer = new CreateAnAnswer(question);
             createAnAnswer.ShowDialog();
-
+            UpdateAnswerList();
         }
     }
 }
