@@ -28,5 +28,20 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
             this.answers = answers;
             this.currentQuestion = currentQuestion;
         }
+
+        private void AddTextAnswer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddPictureAnswer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddOpenAnswer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

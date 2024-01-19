@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Додати відповідь" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStyle="ToolWindow">
     <WrapPanel>
-        <Button Margin="5">Текстова відповідь</Button>
-        <Button Margin="5">Відповідь картинкою</Button>
-        <Button Margin="5">Відкрита відповідь</Button>
+        <Button Margin="5" Click="AddTextAnswer_Click">Текстова відповідь</Button>
+        <Button Margin="5" Click="AddPictureAnswer_Click">Відповідь картинкою</Button>
+        <Button Margin="5" Click="AddOpenAnswer_Click">Відкрита відповідь</Button>
     </WrapPanel>
 </Window>
