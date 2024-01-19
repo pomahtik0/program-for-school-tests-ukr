@@ -24,9 +24,11 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Grid.Row="1">
-            <StackPanel x:Name="answerPanel"/>
-            <Button Margin="15" Width="140" Content="Додати нове питання"></Button>
-        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden" Grid.Row="1">
+            <StackPanel>
+                <StackPanel x:Name="answerPanel"/>
+                <Button Margin="15" Width="140" Content="Додати нове питання"></Button>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
