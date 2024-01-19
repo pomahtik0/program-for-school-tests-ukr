@@ -37,5 +37,11 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
                 answerPanel.Children.Add(answer.ShowInRedactMode());
             }
         }
+
+        private void AddNewAnswer_Click(object sender, RoutedEventArgs e)
+        {
+            Question q;
+
+        }
     }
 }

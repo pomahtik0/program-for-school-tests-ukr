@@ -32,18 +32,21 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         private void AddTextAnswer_Click(object sender, RoutedEventArgs e)
         {
             answers.Append(new TextAnswer(currentQuestion));
+            this.Close();
         }
 
         private void AddPictureAnswer_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
             answers.Append(new PictureAnswer(currentQuestion));
+            this.Close();
         }
 
         private void AddOpenAnswer_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
             answers.Append(new OpenAnswer(currentQuestion));
+            this.Close();
         }
     }
 }

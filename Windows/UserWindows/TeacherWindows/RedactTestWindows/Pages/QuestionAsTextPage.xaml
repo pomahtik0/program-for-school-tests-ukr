@@ -28,7 +28,7 @@
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden" Grid.Row="1">
             <StackPanel>
                 <StackPanel x:Name="answerPanel"/>
-                <Button Margin="15" Width="140" Content="Додати нове питання"></Button>
+                <Button Margin="15" Width="140" Content="Додати нове питання" Click="AddNewAnswer_Click"></Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>
