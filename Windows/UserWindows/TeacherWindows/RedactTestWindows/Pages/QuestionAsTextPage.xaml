@@ -20,7 +20,8 @@
             </StackPanel>
             <StackPanel Margin="10,0">
                 <Label>Текст питання</Label>
-                <TextBox Text="{Binding Text, Mode=TwoWay}"/>
+                <TextBox Text="{Binding Text, Mode=TwoWay}"
+                         TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
             </StackPanel>
         </StackPanel>
 
