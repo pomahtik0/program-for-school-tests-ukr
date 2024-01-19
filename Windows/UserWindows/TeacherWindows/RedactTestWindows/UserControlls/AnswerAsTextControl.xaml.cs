@@ -49,6 +49,9 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
             textAnswer.AnswerToQuestion.Answers.Remove(textAnswer);
             if (textAnswer.AnswerToQuestion.ActualAnswer == textAnswer)
                 textAnswer.AnswerToQuestion.ActualAnswer = null;
+
+            var parentPanel = this.Parent as Panel;
+            parentPanel?.Children.Remove(this);
         }
     }
 }
