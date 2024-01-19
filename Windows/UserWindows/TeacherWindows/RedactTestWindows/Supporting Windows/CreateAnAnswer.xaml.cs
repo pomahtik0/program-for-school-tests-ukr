@@ -20,25 +20,23 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
     /// </summary>
     public partial class CreateAnAnswer : Window
     {
-        IEnumerable<Answer> answers;
         Question currentQuestion;
-        public CreateAnAnswer(IEnumerable<Answer> answers, Question currentQuestion)
+        public CreateAnAnswer(Question currentQuestion)
         {
             InitializeComponent();
-            this.answers = answers;
             this.currentQuestion = currentQuestion;
         }
 
         private void AddTextAnswer_Click(object sender, RoutedEventArgs e)
         {
-            answers.Append(new TextAnswer(currentQuestion));
+            currentQuestion.Answers.Append(new TextAnswer(currentQuestion));
             this.Close();
         }
 
         private void AddPictureAnswer_Click(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
-            answers.Append(new PictureAnswer(currentQuestion));
+            currentQuestion.Answers.Append(new PictureAnswer(currentQuestion));
             this.Close();
         }
     }
