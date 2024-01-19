@@ -36,7 +36,7 @@
                     <Label>Час на тест(хв.)</Label>
                     <TextBox Width="100" Text="{Binding TimeForTest, Mode=TwoWay}"/>
                     <Label>Максимальна оцінка</Label>
-                    <TextBox Width="100" Name="{Binding MaxMark, Mode=TwoWay}"/>
+                    <TextBox Width="100" Text="{Binding MaxMark, Mode=TwoWay}"/>
                     <CheckBox>Випадковий порядок тестів</CheckBox>
                 </StackPanel>    
             </TabItem>
