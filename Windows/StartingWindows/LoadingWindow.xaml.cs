@@ -47,10 +47,10 @@ namespace program_for_school_tests_ukr.Windows
             testInfo.Questions.Add(q1);
             testInfo.Questions.Add(q2);
             var a1 = new TextAnswer(q1);
-            var a2 = new TextAnswer(q1);
+            var a2 = new TextAnswer(q1) { Text = "ffasdf"};
             q1.ActualAnswer = a2;
-            var a3 = new TextAnswer(q2);
-            var a4 = new TextAnswer(q2);
+            var a3 = new TextAnswer(q2) { Text = "dsfcbxcx" };
+            var a4 = new TextAnswer(q2) { Text = "cvxzxs"};
             testInfo.ShowToRedact().Show();
             this.Close();
         }
