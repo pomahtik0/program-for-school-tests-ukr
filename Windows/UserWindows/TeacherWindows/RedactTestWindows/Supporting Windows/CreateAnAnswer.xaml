@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.Supporting_Windows"
         mc:Ignorable="d"
         Title="CreateAnAnswer" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <WrapPanel>
+        <Button Margin="5">Текстова відповідь</Button>
+        <Button Margin="5">Відповідь картинкою</Button>
+        <Button Margin="5">Відкрита відповідь</Button>
+    </WrapPanel>
 </Window>
