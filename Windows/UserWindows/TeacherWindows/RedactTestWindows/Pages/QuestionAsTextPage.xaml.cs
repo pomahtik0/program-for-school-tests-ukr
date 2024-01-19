@@ -1,4 +1,5 @@
 ﻿using program_for_school_tests_ukr.Classes.Tests;
+using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.Supporting_Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,8 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void AddNewAnswer_Click(object sender, RoutedEventArgs e)
         {
-            Question q;
+            CreateAnAnswer createAnAnswer = new CreateAnAnswer(question.Answers, question);
+            createAnAnswer.ShowDialog();
 
         }
     }
