@@ -3,6 +3,7 @@ using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,9 +54,15 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void PageController_Loaded(object sender, RoutedEventArgs e)
         {
+            ListOfQuestions.CollectionChanged += ListOfQuestions_Updated;
+            RefreshLinksToPages();
+        }
+
+        private void RefreshLinksToPages()
+        {
             wrapper.Children.Clear();
             int i = 1;
-            foreach(Question question in ListOfQuestions)
+            foreach (Question question in ListOfQuestions)
             {
                 Button button = new Button();
                 button.Content = i++.ToString();
@@ -79,6 +86,11 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         private Question addNewQuestion()
         {
             throw new NotImplementedException();
+        }
+
+        private void ListOfQuestions_Updated(object? sender, NotifyCollectionChangedEventArgs e)
+        {
+            RefreshLinksToPages();
         }
     }
 }
