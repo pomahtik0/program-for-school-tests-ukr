@@ -23,7 +23,7 @@
                 <TextBox Text="{Binding Text, Mode=TwoWay}" Width="300" Height="100"
                          TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
             </StackPanel>
-            <Button HorizontalAlignment="Right" VerticalAlignment="Top" Content="Del"/>
+            <Button HorizontalAlignment="Right" VerticalAlignment="Top" Content="Del" Click="DeleteQuestion_Click"/>
         </StackPanel>
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden" Grid.Row="1">
