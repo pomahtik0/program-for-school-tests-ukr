@@ -60,6 +60,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         protected TestToPass? testToPass;
         public abstract Window ShowToRedact();
         public abstract Window ShowToPass();
+        public abstract void AddQuestion(Question question, object? parameters = null);
     }
 
     public class SimpleTest(Teacher teacher) : TestInfo(teacher)
@@ -85,6 +86,11 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public override Window ShowToPass()
         {
             throw new NotImplementedException();
+        }
+
+        public override void AddQuestion(Question question, object? parameters = null)
+        {
+
         }
     }
 }
