@@ -42,10 +42,8 @@ namespace program_for_school_tests_ukr.Windows
         {
             Teacher teacher = new Teacher();
             TestInfo testInfo = new SimpleTest(teacher);
-            var q1 = new QuestionAsText();
-            var q2 = new QuestionAsText();
-            testInfo.Questions.Add(q1);
-            testInfo.Questions.Add(q2);
+            var q1 = new QuestionAsText(testInfo);
+            var q2 = new QuestionAsText(testInfo);
             var a1 = new TextAnswer(q1);
             var a2 = new TextAnswer(q1) { Text = "ffasdf"};
             q1.ActualAnswer = a2;
