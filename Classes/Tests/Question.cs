@@ -36,6 +36,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class QuestionAsText : Question
     {
+        public QuestionAsText(TestInfo currentTest, object? parameters = null) : base(currentTest, parameters)
+        {
+        }
+
         [Unicode]
         [MaxLength(256)]
         [Column("Text")]
@@ -53,6 +57,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class QuestionAsPicture : Question
     {
+        public QuestionAsPicture(TestInfo currentTest, object? parameters = null) : base(currentTest, parameters)
+        {
+        }
+
         public byte[]? Picture { get; protected set; }
         protected virtual System.Drawing.Image? GetImageFromArray()
         {
@@ -83,6 +91,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
     public class QuestionAsPictureAndText : QuestionAsPicture
     {
+        public QuestionAsPictureAndText(TestInfo currentTest, object? parameters = null) : base(currentTest, parameters)
+        {
+        }
+
         [Unicode]
         [MaxLength(256)]
         [Column("Text")]
