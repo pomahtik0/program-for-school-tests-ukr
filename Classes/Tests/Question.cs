@@ -34,7 +34,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
         public abstract Page ShowInRedactMode();
         public virtual void RemoveQuestion()
         {
-
+            Test.RemoveQuestion(this);
         }
     }
 
