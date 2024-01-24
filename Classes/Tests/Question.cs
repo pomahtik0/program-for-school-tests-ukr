@@ -32,6 +32,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
         }
         public abstract Page Show();
         public abstract Page ShowInRedactMode();
+        public virtual void RemoveQuestion()
+        {
+
+        }
     }
 
     public class QuestionAsText : Question
