@@ -64,6 +64,10 @@ namespace program_for_school_tests_ukr.Classes.Tests
         {
             Questions.Add(question);
         }
+        public virtual void RemoveQuestion(Question question)
+        {
+            Questions.Remove(question);
+        }
     }
 
     public class SimpleTest(Teacher teacher) : TestInfo(teacher)
