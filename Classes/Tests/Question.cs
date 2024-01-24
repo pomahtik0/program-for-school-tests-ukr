@@ -20,10 +20,16 @@ namespace program_for_school_tests_ukr.Classes.Tests
         [Unicode]
         [MaxLength(50)]
         public string Name { get; set; } = "";
+        public TestInfo Test { get; set; }
         public ObservableCollection<Answer> Answers { get; } = [];
         public Answer? ActualAnswer { get; set; }
         [NotMapped]
         protected Page? QuestionPage { get; set; }
+        protected Question(TestInfo currentTest, object? parameters = null)
+        {
+            Test = currentTest;
+            currentTest.AddQuestion(this, parameters);
+        }
         public abstract Page Show();
         public abstract Page ShowInRedactMode();
     }
