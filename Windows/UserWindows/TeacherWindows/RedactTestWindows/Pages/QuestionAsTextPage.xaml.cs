@@ -53,7 +53,12 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
 
         private void DeleteQuestion_Click(object sender, RoutedEventArgs e)
         {
-            question.
+            question.RemoveQuestion();
+            if (this.Parent is Frame)
+            {
+                var frame = (Frame)this.Parent;
+                frame.Content = null;
+            }
         }
     }
 }
