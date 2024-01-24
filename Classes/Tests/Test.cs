@@ -90,7 +90,7 @@ namespace program_for_school_tests_ukr.Classes.Tests
 
         public override void AddQuestion(Question question, object? parameters = null)
         {
-
+            Questions.Add(question);
         }
     }
 }
