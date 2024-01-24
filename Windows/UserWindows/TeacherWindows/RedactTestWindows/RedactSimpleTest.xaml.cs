@@ -30,7 +30,7 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows
 
         private void OnWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            pageController.DataContext = new ObservableCollection<Question>(test.Questions);
+            pageController.DataContext = test.Questions;
             DataContext = test;
         }
     }
