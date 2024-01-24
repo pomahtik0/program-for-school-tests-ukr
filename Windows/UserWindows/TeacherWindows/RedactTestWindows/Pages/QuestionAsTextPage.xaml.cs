@@ -2,6 +2,7 @@
 using program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.RedactTestWindows.Supporting_Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,11 +55,6 @@ namespace program_for_school_tests_ukr.Windows.UserWindows.TeacherWindows.Redact
         private void DeleteQuestion_Click(object sender, RoutedEventArgs e)
         {
             question.RemoveQuestion();
-            if (this.Parent is Frame)
-            {
-                var frame = (Frame)this.Parent;
-                frame.Content = null;
-            }
         }
     }
 }
